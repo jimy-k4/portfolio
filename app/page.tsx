@@ -465,10 +465,10 @@ export default function Portfolio() {
               </Button>
 
               <div className="flex space-x-6">
-                <Link href={c.linkedin} className="text-zinc-400 hover:text-zinc-100 transition-colors">
+                <Link href={c.linkedin} target="_blank" className="text-zinc-400 hover:text-zinc-100 transition-colors">
                   <Linkedin className="h-8 w-8" />
                 </Link>
-                <Link href={c.github} className="text-zinc-400 hover:text-zinc-100 transition-colors">
+                <Link href={c.github} target="_blank" className="text-zinc-400 hover:text-zinc-100 transition-colors">
                   <Github className="h-8 w-8" />
                 </Link>
               </div>
