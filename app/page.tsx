@@ -25,7 +25,7 @@ const translations = {
       greeting: "Hi, I'm",
       name: "Juan Llinares",
       aka: "a.k.a. Jimy",
-      title: "Software Developer",
+      title: "Computer Engineer",
       description:
         "Passionate about creating and inspired by what I have yet to master. Ignorance is just a state of transition.",
       cta: "My Projects",
@@ -36,13 +36,16 @@ const translations = {
       subtitle: "A concise overview of my work experience and career milestones.",
       experiences: [
         {
-          role: "Junior Software Developer",
-          company: "Gestión Tributaria Territorial S.A.",
+          role: "Full Stack",
+          company: "gtt - Gestión Tributaria Territorial S.A.",
           period: "2025 - Present",
           description:
-            "Implementing software solutions for tax management, working in an agile and collaborative team. Specialized in C#, ASP.NET, PL/SQL and TypeScript.",
+            "Implementing software solutions for tax management, working in an agile and collaborative team. Specialized in C#, PL/SQL, TypeScript and JavaScript.",
           achievements: [
-            "Testing using the Playwright framework",
+            "Development of automated tests in TypeScript and JavaScript using Playwright.",
+            "Participation in the development of the “SIT” web project (Tax Information and Management System), working with multiple languages.",
+            "Design and creation of tables and methods in databases using PL/SQL.",
+            "Effective and agile collaboration within team environments."
           ],
           show: true,
         },
@@ -123,7 +126,7 @@ const translations = {
       greeting: "Hola, soy",
       name: "Juan Llinares",
       aka: "a.k.a. Jimy",
-      title: "Desarrollador de Software",
+      title: "Ingeniero Informático",
       description:
         "Apasionado de crear e inspirado por lo que aún no domino. El desconocimiento es un simple estado de transición.",
       cta: "Proyectos",
@@ -134,13 +137,16 @@ const translations = {
       subtitle: "Una visión concisa de mi experiencia laboral e hitos profesionales.",
       experiences: [
         {
-          role: "Desarrollador de Software Junior",
-          company: "Gestión Tributaria Territorial S.A.",
+          role: "Full Stack",
+          company: "gtt - Gestión Tributaria Territorial S.A.",
           period: "2025 - Presente",
           description:
-            "Implementando soluciones de software para la gestión tributaria, trabajando en un equipo ágil y colaborativo. Especializado en C#, ASP.NET, PL/SQL y TypeScript.",
+            "Implementando soluciones de software para la gestión tributaria, trabajando en un equipo ágil y colaborativo. Especializado en C#, PL/SQL, TypeScript y JavaScript.",
           achievements: [
-            "Testing usando el framework Playwright",
+            "Desarrollo de pruebas automatizadas en TypeScript y JavaScript utilizando Playwright.",
+            "Participación en el desarrollo del proyecto web “SIT” (Sistema de Información y gestión Tributario), trabajando con múltiples lenguajes.",
+            "Diseño y creación de tablas y métodos en bases de datos mediante PL/SQL.",
+            "Colaboración eficaz y ágil en equipos de trabajo."
           ],
           show: true,
         },
