@@ -188,7 +188,7 @@ const translations = {
             "Plataforma web para el equipo de drift aruateam, con CMS, Backend y Frontend.",
           tech: ["React", "Node.js", "Supabase", "Tailwind"],
           image: "/images/aruateam.png",
-          link: "https://aruateam.com",
+          link: "https://new-aruateam-frontend.vercel.app/",
           repo: "#",
         },
         {
