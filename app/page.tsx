@@ -43,9 +43,9 @@ const translations = {
             "Implementing software solutions for tax management, working in an agile and collaborative team. Specialized in C#, PL/SQL, TypeScript and JavaScript.",
           achievements: [
             "Development of automated tests in TypeScript and JavaScript using Playwright.",
-            "Participation in the development of the “SIT” web project (Tax Information and Management System), working with multiple languages.",
-            "Design and creation of tables and methods in databases using PL/SQL.",
-            "Effective and agile collaboration within team environments."
+            "Participation in the development of the “SIT” national project (Tax Information and Management System) for Spain and the “SITN” international project for Costa Rica and Honduras, working with multiple languages.",
+            "Design and creation of tables and packages in databases using PL/SQL.",
+            "Effective and agile collaboration using a hybrid SCRUM and Kanban method in work teams with version control across all projects."
           ],
           show: true,
         },
@@ -144,9 +144,9 @@ const translations = {
             "Implementando soluciones de software para la gestión tributaria, trabajando en un equipo ágil y colaborativo. Especializado en C#, PL/SQL, TypeScript y JavaScript.",
           achievements: [
             "Desarrollo de pruebas automatizadas en TypeScript y JavaScript utilizando Playwright.",
-            "Participación en el desarrollo del proyecto web “SIT” (Sistema de Información y gestión Tributario), trabajando con múltiples lenguajes.",
-            "Diseño y creación de tablas y métodos en bases de datos mediante PL/SQL.",
-            "Colaboración eficaz y ágil en equipos de trabajo."
+            "Participación en el desarrollo del proyecto nacional “SIT” (Sistema de Información y gestión Tributario) e internacional “SITN”, trabajando con múltiples lenguajes, para los países España, Costa Rica y Honduras.",
+            "Diseño y creación de tablas y paquetes en bases de datos mediante PL/SQL.",
+            "Colaboración eficaz y ágil usando híbrido de SCRUM y Kanban en equipos de trabajo con control de versiones en todos los proyectos."
           ],
           show: true,
         },
