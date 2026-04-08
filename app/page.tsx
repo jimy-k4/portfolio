@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 const contactInfo = {
   email: "jllinaresmauri@gmail.com",
   linkedin: "https://www.linkedin.com/in/juan-llinares-mauri/",
-  github: "https://www.github.com/jlm109-ua",
+  github: "https://www.github.com/jimy-k4",
 }
 
 const translations = {
