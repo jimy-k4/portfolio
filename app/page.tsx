@@ -97,7 +97,7 @@ const translations = {
           tech: ["React", "JavaScript", "p5.js", "HTML", "CSS"],
           image: "/images/particle-life.png",
           link: "https://particle-life-arua.vercel.app/",
-          repo: "https://github.com/jlm109-ua/particle-life"
+          repo: "https://github.com/jimy-k4/particle-life"
         },
         {
           title: "Memoji-my",
@@ -106,7 +106,7 @@ const translations = {
           tech: ["React", "JavaScript", "HTML", "CSS", "Next.js", "Dicebear"],
           image: "/images/memojimy.png",
           link: "https://memoji-my.vercel.app/",
-          repo: "https://github.com/jlm109-ua/memoji-my",
+          repo: "https://github.com/jimy-k4/memoji-my",
         },
       ],
     },
@@ -198,7 +198,7 @@ const translations = {
           tech: ["React", "JavaScript", "p5.js", "HTML", "CSS"],
           image: "/images/particle-life.png",
           link: "https://particle-life-arua.vercel.app/",
-          repo: "https://github.com/jlm109-ua/particle-life"
+          repo: "https://github.com/jimy-k4/particle-life"
         },
         {
           title: "Memoji-my",
@@ -207,7 +207,7 @@ const translations = {
           tech: ["React", "JavaScript", "HTML", "CSS", "Next.js", "Dicebear"],
           image: "/images/memojimy.png",
           link: "https://memoji-my.vercel.app/",
-          repo: "https://github.com/jlm109-ua/memoji-my",
+          repo: "https://github.com/jimy-k4/memoji-my",
         },
       ],
     },
