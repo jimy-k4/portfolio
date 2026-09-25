@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Windows metadata copied into WSL: the ":" in the name breaks clones on Windows
+*:Zone.Identifier
