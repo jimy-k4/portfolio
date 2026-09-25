@@ -24,10 +24,14 @@ type ProjectData = {
   link: string
   /** Public repository, or `null` when the code is private. */
   repo: string | null
+  /** Someone who built it with me. */
+  credit?: { name: string; url: string }
   text: Record<Locale, ProjectText>
 }
 
 export type Project = Omit<ProjectData, "text"> & ProjectText
+
+const edu = { name: "Edu Ruiz", url: "https://github.com/hxst1" }
 
 const projects: ProjectData[] = [
   {
@@ -81,19 +85,22 @@ const projects: ProjectData[] = [
   {
     slug: "aruateam",
     title: "aruateam",
-    year: "2025",
+    year: "2024",
     featured: false,
-    tech: ["React", "Node.js", "Supabase", "Tailwind"],
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "Koa", "Prisma"],
     image: aruateam,
     link: "https://new-aruateam-frontend.vercel.app/",
-    repo: null,
+    repo: "https://github.com/hxst1/aruateam",
+    credit: edu,
     text: {
       en: {
-        description: "Web platform for the drift team aruateam, including CMS, Backend, and Frontend.",
+        description:
+          "Website for the drift team aruateam. The first version had a public site, a CMS for the team and its own backend; today it lives on as the team's shop.",
         imageAlt: "aruateam shop with drift team merchandise",
       },
       es: {
-        description: "Plataforma web para el equipo de drift aruateam, con CMS, Backend y Frontend.",
+        description:
+          "Web del equipo de drift aruateam. La primera versión tenía web pública, un CMS para el equipo y backend propio; hoy sigue viva como la tienda del equipo.",
         imageAlt: "Tienda de aruateam con productos del equipo de drift",
       },
     },
@@ -107,15 +114,16 @@ const projects: ProjectData[] = [
     image: particleLife,
     link: "https://particle-life-arua.vercel.app/",
     repo: "https://github.com/jimy-k4/particle-life",
+    credit: edu,
     text: {
       en: {
         description:
-          "2D particle life simulation where particles interact with each other and the environment. Developed in collaboration with a friend.",
+          "2D particle life simulation where particles interact with each other and the environment.",
         imageAlt: "Particle Life simulation running on a laptop",
       },
       es: {
         description:
-          "Simulación de vida de partículas en 2D, donde las partículas interactúan entre sí y con el entorno. Desarrollado en conjunto con un amigo.",
+          "Simulación de vida de partículas en 2D, donde las partículas interactúan entre sí y con el entorno.",
         imageAlt: "Simulación de Particle Life en un portátil",
       },
     },

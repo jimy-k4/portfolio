@@ -66,7 +66,7 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
           ))}
         </ul>
 
-        <div className="relative z-10 mt-auto flex items-center gap-4 pt-6 text-sm">
+        <div className="relative z-10 mt-auto flex flex-wrap items-center gap-x-5 pt-6 text-sm">
           {project.repo ? (
             <ExternalLink
               href={project.repo}
@@ -80,6 +80,18 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
             <span className="inline-flex min-h-11 items-center gap-2 text-subtle">
               <Lock aria-hidden="true" className="size-4" />
               {labels.privateCode}
+            </span>
+          )}
+          {project.credit && (
+            <span className="inline-flex min-h-11 items-center gap-1 text-subtle">
+              {labels.with}
+              <ExternalLink
+                href={project.credit.url}
+                newTabLabel={labels.newTab}
+                className="font-medium text-muted underline decoration-line-strong underline-offset-4 transition-colors hover:text-fg"
+              >
+                {project.credit.name}
+              </ExternalLink>
             </span>
           )}
         </div>

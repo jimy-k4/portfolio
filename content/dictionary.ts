@@ -35,6 +35,7 @@ const en = {
     code: "Code",
     privateCode: "Private code",
     tech: "Technologies",
+    with: "With",
     newTab: "(opens in a new tab)",
   },
   experience: {
@@ -90,6 +91,7 @@ const es: Dictionary = {
     code: "Código",
     privateCode: "Código privado",
     tech: "Tecnologías",
+    with: "Con",
     newTab: "(se abre en una pestaña nueva)",
   },
   experience: {
