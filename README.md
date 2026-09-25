@@ -10,7 +10,7 @@ My personal site: projects, professional trajectory and contact, in English and 
 - React 19 and TypeScript
 - [Tailwind CSS 4](https://tailwindcss.com), with the design tokens in `app/globals.css`
 - Geist, Geist Mono and Instrument Serif through `next/font`
-- Deployed on Vercel
+- Deployed on Vercel, only from `main`: `vercel.json` turns off preview deployments for other branches
 
 ## Features
 
