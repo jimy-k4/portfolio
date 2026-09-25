@@ -58,6 +58,17 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
           {project.description}
         </p>
 
+        {featured && project.highlights && (
+          <ul aria-label={labels.highlights} className="mt-5 space-y-2.5">
+            {project.highlights.map((highlight) => (
+              <li key={highlight} className="flex gap-3 text-[15px] leading-relaxed text-pretty">
+                <span aria-hidden="true" className="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-accent-text" />
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        )}
+
         <ul aria-label={labels.tech} className="mt-6 flex flex-wrap gap-1.5">
           {project.tech.map((tech) => (
             <li key={tech} className="rounded-full border border-line bg-bg px-2.5 py-1 font-mono text-[11px] text-muted">
@@ -83,12 +94,12 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
             </span>
           )}
           {project.credit && (
-            <span className="inline-flex min-h-11 items-center gap-1 text-subtle">
+            <span className="inline-flex items-center gap-1 text-subtle">
               {labels.with}
               <ExternalLink
                 href={project.credit.url}
                 newTabLabel={labels.newTab}
-                className="font-medium text-muted underline decoration-line-strong underline-offset-4 transition-colors hover:text-fg"
+                className="inline-flex min-h-11 items-center font-medium text-muted underline decoration-line-strong underline-offset-4 transition-colors hover:text-fg"
               >
                 {project.credit.name}
               </ExternalLink>
