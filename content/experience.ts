@@ -19,29 +19,29 @@ const experience: ExperienceData[] = [
     show: true,
     text: {
       en: {
-        role: "Full Stack",
+        role: "Full Stack Developer",
         company: "gtt - Gestión Tributaria Territorial S.A.",
         period: "2025 - Present",
         description:
-          "Implementing software solutions for tax management, working in an agile and collaborative team. Specialized in C#, PL/SQL, TypeScript and JavaScript.",
+          "I build tax management software in an agile team, from the database to the interface, with C#, PL/SQL, TypeScript and JavaScript.",
         achievements: [
-          "Development of automated tests in TypeScript and JavaScript using Playwright.",
-          "Participation in the development of the “SIT” national project (Tax Information and Management System) for Spain and the “SITN” international project for Costa Rica and Honduras, working with multiple languages.",
-          "Design and creation of tables and packages in databases using PL/SQL.",
-          "Effective and agile collaboration using a hybrid SCRUM and Kanban method in work teams with version control across all projects.",
+          "End-to-end automated tests with Playwright, in TypeScript and JavaScript.",
+          "Development of SIT, the national Tax Information and Management System, and of SITN, its international version for Costa Rica and Honduras.",
+          "Design of Oracle tables and PL/SQL packages.",
+          "Scrum and Kanban combined, with version control in every project.",
         ],
       },
       es: {
-        role: "Full Stack",
+        role: "Desarrollador Full Stack",
         company: "gtt - Gestión Tributaria Territorial S.A.",
         period: "2025 - Presente",
         description:
-          "Implementando soluciones de software para la gestión tributaria, trabajando en un equipo ágil y colaborativo. Especializado en C#, PL/SQL, TypeScript y JavaScript.",
+          "Desarrollo software de gestión tributaria en un equipo ágil, de la base de datos a la interfaz, con C#, PL/SQL, TypeScript y JavaScript.",
         achievements: [
-          "Desarrollo de pruebas automatizadas en TypeScript y JavaScript utilizando Playwright.",
-          "Participación en el desarrollo del proyecto nacional “SIT” (Sistema de Información y gestión Tributario) e internacional “SITN”, trabajando con múltiples lenguajes, para los países España, Costa Rica y Honduras.",
-          "Diseño y creación de tablas y paquetes en bases de datos mediante PL/SQL.",
-          "Colaboración eficaz y ágil usando un híbrido de SCRUM y Kanban en equipos de trabajo con control de versiones en todos los proyectos.",
+          "Pruebas automatizadas de extremo a extremo con Playwright, en TypeScript y JavaScript.",
+          "Desarrollo de SIT, el Sistema de Información y gestión Tributario nacional, y de SITN, su versión internacional para Costa Rica y Honduras.",
+          "Diseño de tablas Oracle y paquetes PL/SQL.",
+          "Scrum y Kanban combinados, con control de versiones en todos los proyectos.",
         ],
       },
     },
@@ -54,11 +54,11 @@ const experience: ExperienceData[] = [
         company: "University of Alicante",
         period: "2023 - 2025",
         description:
-          "Providing assistance to students at the University of Alicante and others with access to the eduroam network. Learned from real user problems and developed effective solutions.",
+          "I helped students of the University of Alicante, and visitors from other universities, connect to eduroam. Real problems from real users: a lesson I apply to everything I build.",
         achievements: [
-          "Cross-platform support: Windows, macOS, Linux, Android, iOS, Chromebook",
-          "Multilingual support",
-          "Real-time problem resolution",
+          "Support on Windows, macOS, Linux, Android, iOS and Chromebook.",
+          "Help in several languages.",
+          "Problems solved on the spot.",
         ],
       },
       es: {
@@ -66,11 +66,11 @@ const experience: ExperienceData[] = [
         company: "Universidad de Alicante",
         period: "2023 - 2025",
         description:
-          "Prestando ayuda a los alumnos de la Universidad de Alicante y otras con el acceso a la red eduroam. Aprendí de los problemas reales de los usuarios y desarrollé soluciones efectivas.",
+          "Ayudaba a los alumnos de la Universidad de Alicante, y a los de otras universidades de visita, a conectarse a eduroam. Problemas reales de usuarios reales: una lección que aplico a todo lo que construyo.",
         achievements: [
-          "Multiplataforma: Windows, macOS, Linux, Android, iOS, Chromebook",
-          "Apoyo multilingüe",
-          "Resolución de problemas en tiempo real",
+          "Soporte en Windows, macOS, Linux, Android, iOS y Chromebook.",
+          "Atención en varios idiomas.",
+          "Incidencias resueltas en el momento.",
         ],
       },
     },

@@ -9,6 +9,8 @@ import particleLife from "@/assets/projects/particle-life.webp"
 
 type ProjectText = {
   description: string
+  /** The essential points, shown as a list on the large cards. */
+  highlights?: string[]
   /** Short status shown as a badge, e.g. "In production". */
   status?: string
   imageAlt: string
@@ -47,13 +49,25 @@ const projects: ProjectData[] = [
       en: {
         status: "In production",
         description:
-          "A training log made for the gym floor: record every set in a distraction-free mode, plan your routines and follow how your strength, body and wellbeing evolve. Its coach mode lets trainers program mesocycles for their athletes and track their progress, with push notifications.",
+          "A training log made to be used at the gym, with your phone in one hand. It started as my own and now also serves coaches and their athletes.",
+        highlights: [
+          "Distraction-free mode to log set by set, with RIR and rest timers.",
+          "Coach mode: plan mesocycles, assign routines and follow each athlete's progress. The athlete decides what to share.",
+          "Installable app with push notifications for rests, reminders and news from your coach.",
+          "Each user's data is isolated in Postgres with row-level security.",
+        ],
         imageAlt: "Gym.y welcome screen: “Get to know yourself. To failure.” next to the sign-in form",
       },
       es: {
         status: "En producción",
         description:
-          "Un diario de entrenamiento pensado para usarse en el gimnasio: apunta cada serie en un modo sin distracciones, planifica tus rutinas y sigue la evolución de tu fuerza, tu físico y tu bienestar. Su modo entrenador permite programar mesociclos a los alumnos y seguir su progreso, con avisos push.",
+          "Un diario de entrenamiento pensado para usarse en el gimnasio, con el móvil en una mano. Nació para mí y hoy también sirve a entrenadores y a sus alumnos.",
+        highlights: [
+          "Modo sin distracciones para apuntar serie a serie, con RIR y descansos.",
+          "Modo entrenador: programa mesociclos, asigna rutinas y sigue el progreso de cada alumno. El alumno decide qué comparte.",
+          "App instalable con avisos push de descansos, recordatorios y novedades del entrenador.",
+          "Los datos de cada usuario, aislados en Postgres con seguridad a nivel de fila.",
+        ],
         imageAlt: "Pantalla de bienvenida de Gym.y: «Conócete. Al fallo.» junto al formulario de acceso",
       },
     },
@@ -71,13 +85,25 @@ const projects: ProjectData[] = [
       en: {
         status: "Open source",
         description:
-          "A brutalist, local-first task board for projects built with AI. Notes live in a file inside your project, so you and any AI assistant work from the same source. No account, no server, and it works offline.",
+          "A brutalist, local-first task board for building projects with AI. The notes live in a file inside the project, so you and any assistant work from the same source. I use it every day to build Gym.y and this site.",
+        highlights: [
+          "Copy exactly the context the AI needs with one key, as clean Markdown with a token estimate.",
+          "The AI answers inside the note and leaves it for review; Bruto picks it up live without overwriting what you type.",
+          "Views that understand the project: web pages and components, .NET APIs and Oracle PL/SQL databases.",
+          "No account and no server: install it as an app, use it offline, in 9 languages.",
+        ],
         imageAlt: "Bruto board with notes connected by arrows and the note editor open",
       },
       es: {
         status: "Código abierto",
         description:
-          "Un tablero de tareas brutalista y local-first para proyectos hechos con IA. Las notas viven en un fichero dentro del propio proyecto, así que tú y cualquier asistente de IA trabajáis sobre la misma fuente. Sin cuenta, sin servidor y funciona sin conexión.",
+          "Un tablero de tareas brutalista y local-first para construir proyectos con IA. Las notas viven en un fichero dentro del propio proyecto, así que tú y cualquier asistente trabajáis sobre la misma fuente. Lo uso cada día para construir Gym.y y esta web.",
+        highlights: [
+          "Copia el contexto justo para la IA con una tecla, en Markdown limpio y con una estimación de tokens.",
+          "La IA responde dentro de la nota y la deja para revisar; Bruto lo recoge al momento sin pisar lo que escribes.",
+          "Vistas que entienden el proyecto: páginas y componentes web, APIs .NET y bases de datos Oracle PL/SQL.",
+          "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
+        ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas y el editor de notas abierto",
       },
     },
@@ -118,12 +144,12 @@ const projects: ProjectData[] = [
     text: {
       en: {
         description:
-          "2D particle life simulation where particles interact with each other and the environment.",
+          "Artificial life in 2D: particles of each colour attract or repel the others following a matrix of rules, and patterns that look alive emerge from them. Every parameter can be tuned live.",
         imageAlt: "Particle Life simulation running on a laptop",
       },
       es: {
         description:
-          "Simulación de vida de partículas en 2D, donde las partículas interactúan entre sí y con el entorno.",
+          "Vida artificial en 2D: las partículas de cada color atraen o repelen a las demás según una matriz de reglas, y de ahí surgen patrones que parecen vivos. Cada parámetro se ajusta en directo.",
         imageAlt: "Simulación de Particle Life en un portátil",
       },
     },
@@ -140,12 +166,12 @@ const projects: ProjectData[] = [
     text: {
       en: {
         description:
-          "A simple web game where you have to find the matching pairs of emojis. You'll never find the same pair twice!",
+          "A memory game with new characters every match: the avatars are generated with the DiceBear API, in the style you pick, with light and dark mode.",
         imageAlt: "Three screens of the Memoji-my memory game with different avatar styles",
       },
       es: {
         description:
-          "Un simple juego web donde tienes que encontrar los pares de emojis coincidentes. ¡Nunca encontrarás el mismo par dos veces!",
+          "Un juego de memoria con personajes nuevos en cada partida: los avatares se generan con la API de DiceBear, en el estilo que elijas, con modo claro y oscuro.",
         imageAlt: "Tres pantallas del juego de memoria Memoji-my con distintos estilos de avatar",
       },
     },
