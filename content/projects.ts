@@ -56,7 +56,8 @@ const projects: ProjectData[] = [
           "Installable app with push notifications for rests, reminders and news from your coach.",
           "Each user's data is isolated in Postgres with row-level security.",
         ],
-        imageAlt: "Gym.y welcome screen: “Get to know yourself. To failure.” next to the sign-in form",
+        imageAlt:
+          "Three phones with Gym.y: the routine for the day, a set being logged in distraction-free mode, and the muscles and weight progress of an exercise",
       },
       es: {
         status: "En producción",
@@ -68,7 +69,8 @@ const projects: ProjectData[] = [
           "App instalable con avisos push de descansos, recordatorios y novedades del entrenador.",
           "Los datos de cada usuario, aislados en Postgres con seguridad a nivel de fila.",
         ],
-        imageAlt: "Pantalla de bienvenida de Gym.y: «Conócete. Al fallo.» junto al formulario de acceso",
+        imageAlt:
+          "Tres móviles con Gym.y: la rutina del día, una serie en el modo sin distracciones y los músculos y la progresión de peso de un ejercicio",
       },
     },
   },
