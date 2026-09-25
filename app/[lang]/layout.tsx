@@ -61,7 +61,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!isLocale(lang)) notFound()
 
   return (
-    <html lang={lang} className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
+    // data-scroll-behavior: Next 16 only turns off the CSS smooth scroll during navigations when asked to.
+    <html lang={lang} data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
       <body>{children}</body>
     </html>
   )

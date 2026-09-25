@@ -57,6 +57,8 @@ export function SiteHeader({ locale, nav }: Props) {
   }, [menuOpen])
 
   const other = otherLocale(locale)
+  // Switching language keeps the visitor in the section they were reading.
+  const otherHref = active && active !== "top" ? `/${other}#${active}` : `/${other}`
   const rememberLocale = () => {
     document.cookie = `${localeCookie}=${other}; path=/; max-age=31536000; samesite=lax`
   }
@@ -93,7 +95,7 @@ export function SiteHeader({ locale, nav }: Props) {
 
         <div className="flex items-center gap-1">
           <Link
-            href={`/${other}`}
+            href={otherHref}
             hrefLang={other}
             onClick={rememberLocale}
             className="flex min-h-11 min-w-11 items-center justify-center rounded-full border border-line px-3 font-mono text-xs font-medium tracking-wider text-muted transition-colors hover:border-line-strong hover:text-fg"
