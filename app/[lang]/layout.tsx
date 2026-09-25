@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
 import { notFound } from "next/navigation"
+import Script from "next/script"
 
 import { getDictionary } from "@/content/dictionary"
 import { site } from "@/content/site"
@@ -63,7 +64,11 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     // data-scroll-behavior: Next 16 only turns off the CSS smooth scroll during navigations when asked to.
     <html lang={lang} data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Anonymous page views, no cookies: https://jimy-superveil.vercel.app */}
+        <Script src="https://jimy-superveil.vercel.app/p.js" data-site="portfolio" strategy="afterInteractive" />
+      </body>
     </html>
   )
 }
