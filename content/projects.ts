@@ -6,6 +6,7 @@ import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
 import mcloc from "@/assets/projects/mcloc.webp"
 import memojiMy from "@/assets/projects/memoji-my.webp"
+import nhoa from "@/assets/projects/nhoa.webp"
 import particleLife from "@/assets/projects/particle-life.webp"
 import superveil from "@/assets/projects/superveil.webp"
 
@@ -110,6 +111,28 @@ const projects: ProjectData[] = [
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas y el editor de notas abierto",
+      },
+    },
+  },
+  {
+    slug: "nhoa",
+    title: "nhoa",
+    year: "2026",
+    featured: false,
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    image: nhoa,
+    link: "https://nhoa-portfolio.vercel.app/",
+    repo: null,
+    text: {
+      en: {
+        description:
+          "Portfolio for Ainhoa Franco, who works in marketing, advertising and PR: editorial design, her work told as campaign case studies, and all the content editable from a single file.",
+        imageAlt: "Home page of Ainhoa Franco Granja's portfolio, with her name in large type and the round nhoa logo",
+      },
+      es: {
+        description:
+          "Portfolio para Ainhoa Franco, de marketing, publicidad y relaciones públicas: diseño editorial, su trabajo contado como casos de campaña y todo el contenido editable desde un solo fichero.",
+        imageAlt: "Portada del portfolio de Ainhoa Franco Granja, con su nombre en grande y el logotipo redondo de nhoa",
       },
     },
   },

@@ -16,6 +16,9 @@ type Props = {
 export function Projects({ dict, projects }: Props) {
   const featured = projects.filter((project) => project.featured)
   const others = projects.filter((project) => !project.featured)
+  // The "More on GitHub" card takes whatever the last row of three leaves free: one gap, two, or a full row.
+  const moreSpan = ["md:col-span-3", "md:col-span-2", ""][others.length % 3]
+  const moreIsWide = moreSpan !== ""
 
   return (
     <section id="projects" aria-labelledby="projects-title" className="border-t border-line">
@@ -41,9 +44,9 @@ export function Projects({ dict, projects }: Props) {
           <ExternalLink
             href={contact.github}
             newTabLabel={dict.work.newTab}
-            className="reveal group flex min-h-56 flex-col justify-between rounded-3xl border border-dashed border-line-strong p-6 transition-colors hover:border-fg/40 hover:bg-surface"
+            className={`reveal group flex flex-col justify-between gap-6 rounded-3xl border border-dashed border-line-strong p-6 transition-colors hover:border-fg/40 hover:bg-surface ${moreSpan} ${moreIsWide ? "min-h-40 md:min-h-0 md:flex-row md:items-center md:justify-start" : "min-h-56"}`}
           >
-            <GitHubIcon className="size-8 text-muted transition-colors group-hover:text-fg" />
+            <GitHubIcon className="size-8 shrink-0 text-muted transition-colors group-hover:text-fg" />
             <span>
               <span className="flex items-center gap-1.5 text-xl font-semibold tracking-tight">
                 {dict.work.more.title}
