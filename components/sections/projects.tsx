@@ -1,5 +1,10 @@
+import { ArrowUpRight } from "lucide-react"
+
 import type { Dictionary } from "@/content/dictionary"
 import type { Project } from "@/content/projects"
+import { contact } from "@/content/site"
+import { ExternalLink } from "@/components/external-link"
+import { GitHubIcon } from "@/components/icons"
 import { ProjectCard } from "@/components/project-card"
 import { SectionHeading } from "@/components/section-heading"
 
@@ -33,6 +38,23 @@ export function Projects({ dict, projects }: Props) {
           {others.map((project) => (
             <ProjectCard key={project.slug} project={project} labels={dict.work} />
           ))}
+          <ExternalLink
+            href={contact.github}
+            newTabLabel={dict.work.newTab}
+            className="reveal group flex min-h-56 flex-col justify-between rounded-3xl border border-dashed border-line-strong p-6 transition-colors hover:border-fg/40 hover:bg-surface"
+          >
+            <GitHubIcon className="size-8 text-muted transition-colors group-hover:text-fg" />
+            <span>
+              <span className="flex items-center gap-1.5 text-xl font-semibold tracking-tight">
+                {dict.work.more.title}
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-5 text-subtle transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-text"
+                />
+              </span>
+              <span className="mt-2 block text-[15px] leading-relaxed text-pretty text-muted">{dict.work.more.description}</span>
+            </span>
+          </ExternalLink>
         </div>
       </div>
     </section>

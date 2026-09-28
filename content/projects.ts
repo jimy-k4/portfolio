@@ -4,8 +4,10 @@ import type { Locale } from "@/lib/i18n"
 import aruateam from "@/assets/projects/aruateam.webp"
 import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
+import mcloc from "@/assets/projects/mcloc.webp"
 import memojiMy from "@/assets/projects/memoji-my.webp"
 import particleLife from "@/assets/projects/particle-life.webp"
+import superveil from "@/assets/projects/superveil.webp"
 
 type ProjectText = {
   description: string
@@ -23,7 +25,8 @@ type ProjectData = {
   featured: boolean
   tech: string[]
   image: StaticImageData
-  link: string
+  /** Live site, or `null` when there is no public page to visit. */
+  link: string | null
   /** Public repository, or `null` when the code is private. */
   repo: string | null
   /** Someone who built it with me. */
@@ -107,6 +110,51 @@ const projects: ProjectData[] = [
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas y el editor de notas abierto",
+      },
+    },
+  },
+  {
+    slug: "superveil",
+    title: "Superveil",
+    year: "2026",
+    featured: false,
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
+    image: superveil,
+    // The dashboard is behind a password, so there is nothing public to visit.
+    link: null,
+    repo: null,
+    text: {
+      en: {
+        description:
+          "The traffic of all my sites on one screen: visits, who is on them right now and where people come from. One line adds a site, it uses no cookies and the data stays in my own database.",
+        imageAlt: "Superveil dashboard with today's visits and one card per project with its chart for the week",
+      },
+      es: {
+        description:
+          "El tráfico de todas mis webs en una pantalla: visitas, quién está dentro ahora mismo y de dónde llega la gente. Una línea añade una web, no usa cookies y los datos se quedan en mi propia base de datos.",
+        imageAlt: "Panel de Superveil con las visitas de hoy y una tarjeta por proyecto con su gráfica de la semana",
+      },
+    },
+  },
+  {
+    slug: "mcloc",
+    title: "MCLoc",
+    year: "2025",
+    featured: false,
+    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+    image: mcloc,
+    link: "https://mcloc.vercel.app/",
+    repo: "https://github.com/jimy-k4/mcloc",
+    text: {
+      en: {
+        description:
+          "A coordinates tracker for Minecraft: save bases, portals and structures by world and dimension, see them on a map, measure distances and convert them to the Nether. It also has tools, like a pixel-perfect circle generator.",
+        imageAlt: "MCLoc circle generator drawing a circle of green blocks",
+      },
+      es: {
+        description:
+          "Un rastreador de coordenadas para Minecraft: guarda bases, portales y estructuras por mundo y dimensión, míralos en un mapa, mide distancias y conviértelas al Nether. Trae herramientas, como un generador de círculos pixel-perfect.",
+        imageAlt: "Generador de círculos de MCLoc dibujando un círculo de bloques verdes",
       },
     },
   },
