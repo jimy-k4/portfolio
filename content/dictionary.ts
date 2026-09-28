@@ -37,6 +37,10 @@ const en = {
     tech: "Technologies",
     with: "With",
     highlights: "Highlights",
+    more: {
+      title: "More on GitHub",
+      description: "Experiments, university assignments and small tools.",
+    },
     newTab: "(opens in a new tab)",
   },
   experience: {
@@ -94,6 +98,10 @@ const es: Dictionary = {
     tech: "Tecnologías",
     with: "Con",
     highlights: "Lo esencial",
+    more: {
+      title: "Más en GitHub",
+      description: "Experimentos, prácticas de la universidad y herramientas pequeñas.",
+    },
     newTab: "(se abre en una pestaña nueva)",
   },
   experience: {

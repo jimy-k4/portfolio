@@ -40,18 +40,22 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
         </div>
 
         <h3 className={`font-semibold tracking-tight ${featured ? "mt-4 text-3xl" : "mt-3 text-xl"}`}>
-          {/* The ::after overlay makes the whole card a link to the live project. */}
-          <ExternalLink
-            href={project.link}
-            newTabLabel={labels.newTab}
-            className="inline-flex items-center gap-1.5 after:absolute after:inset-0 after:content-['']"
-          >
-            {project.title}
-            <ArrowUpRight
-              aria-hidden="true"
-              className={`${featured ? "size-6" : "size-5"} text-subtle transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-text`}
-            />
-          </ExternalLink>
+          {project.link ? (
+            // The ::after overlay makes the whole card a link to the live project.
+            <ExternalLink
+              href={project.link}
+              newTabLabel={labels.newTab}
+              className="inline-flex items-center gap-1.5 after:absolute after:inset-0 after:content-['']"
+            >
+              {project.title}
+              <ArrowUpRight
+                aria-hidden="true"
+                className={`${featured ? "size-6" : "size-5"} text-subtle transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-text`}
+              />
+            </ExternalLink>
+          ) : (
+            project.title
+          )}
         </h3>
 
         <p className={`mt-3 leading-relaxed text-pretty text-muted ${featured ? "text-base sm:text-lg" : "text-[15px]"}`}>
