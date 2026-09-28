@@ -118,7 +118,7 @@ const projects: ProjectData[] = [
     title: "Superveil",
     year: "2026",
     featured: false,
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Playwright"],
     image: superveil,
     // The dashboard is behind a password, so there is nothing public to visit.
     link: null,
@@ -127,12 +127,14 @@ const projects: ProjectData[] = [
       en: {
         description:
           "The traffic of all my sites on one screen: visits, who is on them right now and where people come from. One line adds a site, it uses no cookies and the data stays in my own database.",
-        imageAlt: "Superveil dashboard with today's visits and one card per project with its chart for the week",
+        imageAlt:
+          "Superveil dashboard with today's visits and one card per project, each with a screenshot of the site and its chart for the week",
       },
       es: {
         description:
           "El tráfico de todas mis webs en una pantalla: visitas, quién está dentro ahora mismo y de dónde llega la gente. Una línea añade una web, no usa cookies y los datos se quedan en mi propia base de datos.",
-        imageAlt: "Panel de Superveil con las visitas de hoy y una tarjeta por proyecto con su gráfica de la semana",
+        imageAlt:
+          "Panel de Superveil con las visitas de hoy y una tarjeta por proyecto, cada una con una captura de la web y su gráfica de la semana",
       },
     },
   },
