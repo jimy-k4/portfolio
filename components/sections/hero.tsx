@@ -1,7 +1,8 @@
 import Image from "next/image"
-import { ArrowDown, Mail } from "lucide-react"
+import { ArrowDown, BriefcaseBusiness, Mail, MapPin } from "lucide-react"
 
 import type { Dictionary } from "@/content/dictionary"
+import type { getProfile } from "@/content/profile"
 import type { Project } from "@/content/projects"
 import { contact } from "@/content/site"
 import { ExternalLink } from "@/components/external-link"
@@ -10,9 +11,10 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 type Props = {
   dict: Dictionary
   current: Project[]
+  profile: ReturnType<typeof getProfile>
 }
 
-export function Hero({ dict, current }: Props) {
+export function Hero({ dict, current, profile }: Props) {
   const { hero } = dict
 
   return (
@@ -34,6 +36,17 @@ export function Hero({ dict, current }: Props) {
           </h1>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-pretty text-muted sm:text-xl">{hero.description}</p>
+
+          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+            <li className="inline-flex items-center gap-2">
+              <MapPin aria-hidden="true" className="size-4 text-subtle" />
+              {profile.location}
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <BriefcaseBusiness aria-hidden="true" className="size-4 text-subtle" />
+              {profile.availability}
+            </li>
+          </ul>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a

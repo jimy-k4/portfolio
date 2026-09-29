@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 
 import { getDictionary } from "@/content/dictionary"
 import { getExperience } from "@/content/experience"
+import { getProfile } from "@/content/profile"
 import { getProjects } from "@/content/projects"
 import { contact, site } from "@/content/site"
 import { SiteHeader } from "@/components/site-header"
@@ -18,6 +19,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   const dict = getDictionary(lang)
   const projects = getProjects(lang)
+  const profile = getProfile(lang)
 
   const person = {
     "@context": "https://schema.org",
@@ -25,7 +27,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     name: site.name,
     url: `${site.url}/${lang}`,
     jobTitle: dict.hero.eyebrow,
-    sameAs: [contact.github, contact.linkedin],
+    address: { "@type": "PostalAddress", addressLocality: "Alicante", addressCountry: "ES" },
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Universidad de Alicante" },
+    worksFor: { "@type": "Organization", name: "gtt - Gestión Tributaria Territorial S.A." },
+    knowsLanguage: ["es", "ca", "en"],
+    sameAs: [contact.github, contact.linkedin, contact.kofi],
   }
 
   return (
@@ -38,9 +44,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </a>
       <SiteHeader locale={lang} nav={dict.nav} />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Hero dict={dict} current={projects.filter((project) => project.featured)} />
+        <Hero dict={dict} current={projects.filter((project) => project.featured)} profile={profile} />
         <Projects dict={dict} projects={projects} />
-        <Trajectory dict={dict} experience={getExperience(lang)} />
+        <Trajectory dict={dict} experience={getExperience(lang)} profile={profile} />
         <Contact dict={dict} />
       </main>
       <Footer dict={dict} />
