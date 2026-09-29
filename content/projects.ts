@@ -32,6 +32,8 @@ type ProjectData = {
   repo: string | null
   /** Someone who built it with me. */
   credit?: { name: string; url: string }
+  /** The project's own account on a social network. */
+  social?: { label: string; url: string }
   text: Record<Locale, ProjectText>
 }
 
@@ -83,19 +85,20 @@ const projects: ProjectData[] = [
     title: "Bruto",
     year: "2026",
     featured: true,
-    tech: ["React", "TypeScript", "Vite", "File System Access API", "PWA", "Playwright"],
+    tech: ["React", "TypeScript", "Vite", "File System Access API", "MCP", "PWA", "Playwright"],
     image: bruto,
     link: "https://jimy-k4.github.io/bruto/",
     repo: "https://github.com/jimy-k4/bruto",
+    social: { label: "@brutoboard", url: "https://x.com/brutoboard" },
     text: {
       en: {
         status: "Open source",
         description:
-          "A brutalist, local-first task board for building projects with AI. The notes live in a file inside the project, so you and any assistant work from the same source. I use it every day to build Gym.y and this site.",
+          "A brutalist, local-first task board for building projects with AI. It started as a tool for my own work at gtt and I use it every day: the notes live in a file inside each project, so you and any assistant work from the same source.",
         highlights: [
-          "Copy exactly the context the AI needs with one key, as clean Markdown with a token estimate.",
-          "The AI answers inside the note and leaves it for review; Bruto picks it up live without overwriting what you type.",
-          "Views that understand the project: web pages and components, .NET APIs and Oracle PL/SQL databases.",
+          "Your AI assistant reads the notes and answers inside them, over MCP or with the context you copy with one key. You review and ask for changes in the note itself.",
+          "Notes across projects: a note can block or relate to one on another board (front end, API, database), and both boards show it.",
+          "Views that understand the project: web pages and components, APIs (.NET, Express, Spring…) and databases (Oracle PL/SQL, PostgreSQL, Prisma…).",
           "No account and no server: install it as an app, use it offline, in 9 languages.",
         ],
         imageAlt: "Bruto board with notes connected by arrows and the note editor open",
@@ -103,11 +106,11 @@ const projects: ProjectData[] = [
       es: {
         status: "Código abierto",
         description:
-          "Un tablero de tareas brutalista y local-first para construir proyectos con IA. Las notas viven en un fichero dentro del propio proyecto, así que tú y cualquier asistente trabajáis sobre la misma fuente. Lo uso cada día para construir Gym.y y esta web.",
+          "Un tablero de tareas brutalista y local-first para construir proyectos con IA. Nació como herramienta para mi trabajo en gtt y hoy lo uso cada día: las notas viven en un fichero dentro de cada proyecto, así que tú y cualquier asistente trabajáis sobre la misma fuente.",
         highlights: [
-          "Copia el contexto justo para la IA con una tecla, en Markdown limpio y con una estimación de tokens.",
-          "La IA responde dentro de la nota y la deja para revisar; Bruto lo recoge al momento sin pisar lo que escribes.",
-          "Vistas que entienden el proyecto: páginas y componentes web, APIs .NET y bases de datos Oracle PL/SQL.",
+          "Tu asistente de IA lee las notas y las contesta dentro de ellas, por MCP o con el contexto que copias de una tecla. Tú revisas y pides cambios en la propia nota.",
+          "Notas entre proyectos: una nota puede bloquear o relacionarse con otra de otro tablero (front, API, base de datos) y los dos tableros lo muestran.",
+          "Vistas que entienden el proyecto: páginas y componentes web, APIs (.NET, Express, Spring…) y bases de datos (Oracle PL/SQL, PostgreSQL, Prisma…).",
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas y el editor de notas abierto",

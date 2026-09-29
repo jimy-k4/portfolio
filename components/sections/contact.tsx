@@ -1,10 +1,10 @@
-import { Mail } from "lucide-react"
+import { Coffee, Mail } from "lucide-react"
 
 import type { Dictionary } from "@/content/dictionary"
 import { contact } from "@/content/site"
 import { CopyEmail } from "@/components/copy-email"
 import { ExternalLink } from "@/components/external-link"
-import { GitHubIcon, LinkedInIcon } from "@/components/icons"
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons"
 import { AccentWord } from "@/components/section-heading"
 
 export function Contact({ dict }: { dict: Dictionary }) {
@@ -58,6 +58,26 @@ export function Contact({ dict }: { dict: Dictionary }) {
             >
               <GitHubIcon className="size-4" />
               GitHub
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink
+              href={contact.kofi}
+              newTabLabel={dict.work.newTab}
+              className="inline-flex min-h-12 items-center gap-2.5 rounded-full border border-line px-5 font-medium text-muted transition-colors hover:border-line-strong hover:text-fg"
+            >
+              <Coffee aria-hidden="true" className="size-4" />
+              Ko-fi
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink
+              href={contact.brutoX}
+              newTabLabel={dict.work.newTab}
+              className="inline-flex min-h-12 items-center gap-2.5 rounded-full border border-line px-5 font-medium text-muted transition-colors hover:border-line-strong hover:text-fg"
+            >
+              <XIcon className="size-3.5" />
+              {text.brutoOnX}
             </ExternalLink>
           </li>
         </ul>
