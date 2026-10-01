@@ -4,7 +4,7 @@ import { ArrowUpRight, Lock } from "lucide-react"
 import type { Dictionary } from "@/content/dictionary"
 import type { Project } from "@/content/projects"
 import { ExternalLink } from "@/components/external-link"
-import { GitHubIcon, XIcon } from "@/components/icons"
+import { GitHubIcon, ProductHuntIcon, XIcon } from "@/components/icons"
 
 type Props = {
   project: Project
@@ -105,6 +105,16 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
             >
               <XIcon className="size-3.5" />
               {project.social.label}
+            </ExternalLink>
+          )}
+          {project.productHunt && (
+            <ExternalLink
+              href={project.productHunt}
+              newTabLabel={labels.newTab}
+              className="inline-flex min-h-11 items-center gap-2 font-medium text-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+            >
+              <ProductHuntIcon className="size-4" />
+              Product Hunt
             </ExternalLink>
           )}
           {project.credit && (
