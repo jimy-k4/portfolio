@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowDown, BriefcaseBusiness, Mail, MapPin } from "lucide-react"
+import { ArrowDown, BriefcaseBusiness, Mail, MapPin, Trophy } from "lucide-react"
 
 import type { Dictionary } from "@/content/dictionary"
 import type { getProfile } from "@/content/profile"
@@ -46,6 +46,20 @@ export function Hero({ dict, current, profile }: Props) {
               <BriefcaseBusiness aria-hidden="true" className="size-4 text-subtle" />
               {profile.availability}
             </li>
+            {current
+              .filter((project) => project.award && project.awardUrl)
+              .map((project) => (
+                <li key={project.slug}>
+                  <ExternalLink
+                    href={project.awardUrl!}
+                    newTabLabel={dict.work.newTab}
+                    className="inline-flex items-center gap-2 font-medium text-fg underline decoration-accent-text decoration-2 underline-offset-4 transition-colors hover:text-accent-text"
+                  >
+                    <Trophy aria-hidden="true" className="size-4 text-accent-text" />
+                    {project.title}: {project.award}
+                  </ExternalLink>
+                </li>
+              ))}
           </ul>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">

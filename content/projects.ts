@@ -16,6 +16,8 @@ type ProjectText = {
   highlights?: string[]
   /** Short status shown as a badge, e.g. "In production". */
   status?: string
+  /** A result worth showing off, e.g. a Product Hunt rank; links to `awardUrl`. */
+  award?: string
   imageAlt: string
 }
 
@@ -36,6 +38,8 @@ type ProjectData = {
   social?: { label: string; url: string }
   /** The project's page on Product Hunt. */
   productHunt?: string
+  /** Proof of the award, e.g. that day's leaderboard. */
+  awardUrl?: string
   text: Record<Locale, ProjectText>
 }
 
@@ -93,30 +97,33 @@ const projects: ProjectData[] = [
     repo: "https://github.com/jimy-k4/bruto",
     social: { label: "@brutoboard", url: "https://x.com/brutoboard" },
     productHunt: "https://www.producthunt.com/products/bruto",
+    awardUrl: "https://www.producthunt.com/leaderboard/daily/2026/9/30",
     text: {
       en: {
         status: "Open source",
+        award: "#14 of the day on Product Hunt",
         description:
           "A brutalist, local-first task board for building projects with AI. It started as a tool for my own work at gtt and I use it every day: the notes live in a file inside each project, so you and any assistant work from the same source.",
         highlights: [
+          "#14 of the day on Product Hunt (30 September 2026) among 1,134 launches, built by one person, with fixes from the comments shipped that same day.",
           "Your AI assistant reads the notes and answers inside them, over MCP or with the context you copy with one key. You review and ask for changes in the note itself.",
           "Every change an agent makes over MCP is on record: who made it, when and with what, tied to the commit and the exact files. A note can be read-only for agents. The MCP server is on npm as bruto-mcp.",
           "It understands the project: web pages and components, APIs (.NET, Express, Spring…) and databases (Oracle PL/SQL, PostgreSQL, Prisma…). A note can block or relate to one on another project's board.",
           "No account and no server: install it as an app, use it offline, in 9 languages.",
-          "On launch day it shipped fixes from Product Hunt comments within hours: a sync edge case a user found by reading the code, and notes that keep their age and count how often review sent them back.",
         ],
         imageAlt: "Bruto board with notes connected by arrows, each with its age, and the note editor open",
       },
       es: {
         status: "Código abierto",
+        award: "#14 del día en Product Hunt",
         description:
           "Un tablero de tareas brutalista y local-first para construir proyectos con IA. Nació como herramienta para mi trabajo en gtt y hoy lo uso cada día: las notas viven en un fichero dentro de cada proyecto, así que tú y cualquier asistente trabajáis sobre la misma fuente.",
         highlights: [
+          "#14 del día en Product Hunt (30 de septiembre de 2026) entre 1.134 lanzamientos, hecho por una sola persona y con arreglos salidos de los comentarios ese mismo día.",
           "Tu asistente de IA lee las notas y las contesta dentro de ellas, por MCP o con el contexto que copias de una tecla. Tú revisas y pides cambios en la propia nota.",
           "Cada cambio que hace un agente por MCP queda registrado: quién, cuándo y con qué, ligado al commit y a los ficheros exactos. Una nota puede ser de solo lectura para los agentes. El servidor MCP está en npm como bruto-mcp.",
           "Entiende el proyecto: páginas y componentes web, APIs (.NET, Express, Spring…) y bases de datos (Oracle PL/SQL, PostgreSQL, Prisma…). Una nota puede bloquear o relacionarse con otra del tablero de otro proyecto.",
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
-          "El día del lanzamiento sacó en horas arreglos nacidos de comentarios en Product Hunt: un caso límite de la sincronización que un usuario encontró leyendo el código, y notas que guardan su edad y cuentan cuántas veces las devolvió la revisión.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas, cada una con su edad, y el editor de notas abierto",
       },
