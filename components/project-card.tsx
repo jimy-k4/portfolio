@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowUpRight, Lock } from "lucide-react"
+import { ArrowUpRight, Lock, Trophy } from "lucide-react"
 
 import type { Dictionary } from "@/content/dictionary"
 import type { Project } from "@/content/projects"
@@ -29,13 +29,24 @@ export function ProjectCard({ project, labels, featured = false }: Props) {
       </div>
 
       <div className={`flex flex-1 flex-col ${featured ? "p-6 sm:p-8" : "p-6"}`}>
-        <div className="flex items-center gap-3 font-mono text-xs text-subtle">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-subtle">
           <span>{project.year}</span>
           {project.status && (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-0.5 text-muted">
               <span aria-hidden="true" className="size-1.5 rounded-full bg-accent-text" />
               {project.status}
             </span>
+          )}
+          {project.award && project.awardUrl && (
+            // Above the card's link overlay, so it opens the proof instead of the project.
+            <ExternalLink
+              href={project.awardUrl}
+              newTabLabel={labels.newTab}
+              className="relative z-10 inline-flex items-center gap-1.5 rounded-full bg-accent px-2.5 py-1 font-medium text-accent-ink transition-transform hover:-translate-y-px motion-reduce:transition-none"
+            >
+              <Trophy aria-hidden="true" className="size-3.5" />
+              {project.award}
+            </ExternalLink>
           )}
         </div>
 
