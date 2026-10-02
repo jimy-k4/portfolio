@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image"
 import type { Locale } from "@/lib/i18n"
 
 import aruateam from "@/assets/projects/aruateam.webp"
+import beaconSplit from "@/assets/projects/beacon-split.webp"
 import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
 import mcloc from "@/assets/projects/mcloc.webp"
@@ -126,6 +127,33 @@ const projects: ProjectData[] = [
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas, cada una con su edad, y el editor de notas abierto",
+      },
+    },
+  },
+  {
+    slug: "beacon-split",
+    title: "Beacon Split",
+    year: "2026",
+    featured: false,
+    tech: ["Tauri", "Rust", "React", "TypeScript", "xterm.js"],
+    image: beaconSplit,
+    link: "https://beacon-split.vercel.app/",
+    repo: "https://github.com/hxst1/Beacon-Split",
+    credit: edu,
+    text: {
+      en: {
+        status: "In development",
+        description:
+          "Edu Ruiz's workspace for running several Claude Code sessions at once, each with real terminals, files and git, and a tab that says which one is waiting for an answer. I ported it to Windows (a new transport to its background daemon, Windows' pseudo-console and an installer) and keep building it with him.",
+        imageAlt:
+          "Beacon Split window with project tabs along the top, a Claude Code session on the left and the project's files and git changes on the right",
+      },
+      es: {
+        status: "En desarrollo",
+        description:
+          "El espacio de trabajo de Edu Ruiz para llevar varias sesiones de Claude Code a la vez, cada una con sus terminales, ficheros y git, y una pestaña que te dice cuál está esperando respuesta. Lo porté a Windows (un transporte nuevo hasta su daemon en segundo plano, la consola virtual de Windows y un instalador) y sigo construyéndolo con él.",
+        imageAlt:
+          "Ventana de Beacon Split con las pestañas de proyectos arriba, una sesión de Claude Code a la izquierda y los ficheros y cambios de git del proyecto a la derecha",
       },
     },
   },
