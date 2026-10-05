@@ -27,6 +27,8 @@ type ProjectData = {
   title: string
   year: string
   featured: boolean
+  /** Listed under "Now building" in the hero without getting a large card. */
+  current?: boolean
   tech: string[]
   image: StaticImageData
   /** Live site, or `null` when there is no public page to visit. */
@@ -135,6 +137,7 @@ const projects: ProjectData[] = [
     title: "Beacon Split",
     year: "2026",
     featured: false,
+    current: true,
     tech: ["Tauri", "Rust", "React", "TypeScript", "xterm.js"],
     image: beaconSplit,
     link: "https://beacon-split.vercel.app/",

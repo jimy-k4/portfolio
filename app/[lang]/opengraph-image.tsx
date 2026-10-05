@@ -48,7 +48,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ lan
             Llinares<span style={{ color: "#c5f24a" }}>.</span>
           </div>
         </div>
-        <div style={{ display: "flex", fontSize: 28, color: "#a3a3ad" }}>Gym.y · Bruto · jimy-portfolio.vercel.app</div>
+        <div style={{ display: "flex", fontSize: 28, color: "#a3a3ad" }}>Gym.y · Bruto · Beacon Split · jimy-portfolio.vercel.app</div>
       </div>
     ),
     size,
