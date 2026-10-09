@@ -68,11 +68,12 @@ const projects: ProjectData[] = [
         highlights: [
           "Distraction-free mode to log set by set, with RIR and rest timers.",
           "Coach mode: plan mesocycles, assign routines and follow each athlete's progress. The athlete decides what to share.",
+          "Friends and share links for plans, routines and exercises, milestones across your whole history, and a character you design piece by piece.",
           "Installable app with push notifications for rests, reminders and news from your coach.",
           "Each user's data is isolated in Postgres with row-level security.",
         ],
         imageAlt:
-          "Three phones with Gym.y: the routine for the day, a set being logged in distraction-free mode, and the muscles and weight progress of an exercise",
+          "Three phones with Gym.y, each in a different theme color: today's workout from the routine, a set being logged in training mode, and the muscle map in Progress",
       },
       es: {
         status: "En producción",
@@ -81,11 +82,12 @@ const projects: ProjectData[] = [
         highlights: [
           "Modo sin distracciones para apuntar serie a serie, con RIR y descansos.",
           "Modo entrenador: programa mesociclos, asigna rutinas y sigue el progreso de cada alumno. El alumno decide qué comparte.",
+          "Amigos y enlaces para compartir planes, rutinas y ejercicios, hitos de toda tu historia y un personaje que diseñas a piezas.",
           "App instalable con avisos push de descansos, recordatorios y novedades del entrenador.",
           "Los datos de cada usuario, aislados en Postgres con seguridad a nivel de fila.",
         ],
         imageAlt:
-          "Tres móviles con Gym.y: la rutina del día, una serie en el modo sin distracciones y los músculos y la progresión de peso de un ejercicio",
+          "Tres móviles con Gym.y, cada uno con un color de tema: el entreno que toca hoy en la rutina, una serie en el modo entrenamiento y el visor de músculos de Progreso",
       },
     },
   },
