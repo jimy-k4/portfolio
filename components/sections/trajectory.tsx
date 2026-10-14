@@ -2,17 +2,21 @@ import { ArrowUpRight } from "lucide-react"
 
 import type { Dictionary } from "@/content/dictionary"
 import type { Experience } from "@/content/experience"
+import { getBenchCopy } from "@/content/figures"
 import { getProfile } from "@/content/profile"
+import type { Locale } from "@/lib/i18n"
 import { ExternalLink } from "@/components/external-link"
+import { RadiationBench } from "@/components/figures/radiation-bench/radiation-bench"
 import { SectionHeading } from "@/components/section-heading"
 
 type Props = {
+  locale: Locale
   dict: Dictionary
   experience: Experience[]
   profile: ReturnType<typeof getProfile>
 }
 
-export function Trajectory({ dict, experience, profile }: Props) {
+export function Trajectory({ locale, dict, experience, profile }: Props) {
   const labels = dict.experience
 
   return (
@@ -66,6 +70,11 @@ export function Trajectory({ dict, experience, profile }: Props) {
                       </li>
                     ))}
                   </ul>
+                )}
+                {entry.figure === "radiation-bench" && (
+                  <div className="mt-10 max-w-2xl">
+                    <RadiationBench copy={getBenchCopy(locale)} locale={locale} />
+                  </div>
                 )}
               </div>
             </li>
