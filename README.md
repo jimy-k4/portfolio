@@ -61,6 +61,8 @@ app/
 assets/projects/     project screenshots
 components/          header, project card, copy button, icons
   sections/          hero, projects, trajectory, contact, footer
+  figures/           interactive figures: the radiation bench under the thesis entry
+  iso/               the Anatomy kit (MIT) the figures are drawn with
 content/             all the text and data
 lib/i18n.ts          locales and Accept-Language negotiation
 proxy.ts             redirects / to the right language

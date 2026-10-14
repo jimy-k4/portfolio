@@ -46,7 +46,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero dict={dict} current={projects.filter((project) => project.featured || project.current)} profile={profile} />
         <Projects dict={dict} projects={projects} />
-        <Trajectory dict={dict} experience={getExperience(lang)} profile={profile} />
+        <Trajectory locale={lang} dict={dict} experience={getExperience(lang)} profile={profile} />
         <Contact dict={dict} />
       </main>
       <Footer dict={dict} />

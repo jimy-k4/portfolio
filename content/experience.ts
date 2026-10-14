@@ -2,6 +2,8 @@ import type { Locale } from "@/lib/i18n"
 
 export type Experience = {
   kind: "work" | "education"
+  /** An interactive figure shown under the entry. */
+  figure?: "radiation-bench"
   role: string
   company: string
   period: string
@@ -11,10 +13,11 @@ export type Experience = {
   links?: { label: string; url: string }[]
 }
 
-type ExperienceText = Omit<Experience, "kind">
+type ExperienceText = Omit<Experience, "kind" | "figure">
 
 type ExperienceData = {
   kind: Experience["kind"]
+  figure?: Experience["figure"]
   /** Hidden entries stay here so they can be shown again later. */
   show: boolean
   text: Record<Locale, ExperienceText>
@@ -89,6 +92,7 @@ const experience: ExperienceData[] = [
   },
   {
     kind: "education",
+    figure: "radiation-bench",
     show: true,
     text: {
       en: {
@@ -146,5 +150,5 @@ const experience: ExperienceData[] = [
 ]
 
 export function getExperience(locale: Locale): Experience[] {
-  return experience.filter(({ show }) => show).map(({ kind, text }) => ({ kind, ...text[locale] }))
+  return experience.filter(({ show }) => show).map(({ kind, figure, text }) => ({ kind, figure, ...text[locale] }))
 }

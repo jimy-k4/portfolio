@@ -1,0 +1,163 @@
+/* The bench in the portfolio's colours: the kit's tokens mapped onto the site's, light first and dark
+   with the system setting. The lit accent is the site's lime: it only marks the fault. */
+.iso.tfg-bench {
+  --anatomy-page: var(--bg);
+  --anatomy-card: var(--surface);
+  --anatomy-paper: var(--surface);
+  --anatomy-text: var(--muted);
+  --anatomy-strong: var(--fg);
+  --anatomy-muted: var(--subtle);
+  --anatomy-face: #ffffff;
+  --anatomy-top: #ffffff;
+  --anatomy-shade-0: #dcdcd9;
+  --anatomy-shade-1: #e5e5e2;
+  --anatomy-shade-2: #ededea;
+  --anatomy-shade-3: #f4f4f1;
+  --anatomy-lit-top: #ffffff;
+  --anatomy-lit-shade: #eeeeeb;
+  --anatomy-hi: #26262a;
+  --anatomy-mid: #8a8a8f;
+  --anatomy-lo: #b4b4b8;
+  --anatomy-faint: #d4d4d6;
+  --anatomy-lit: var(--accent-text);
+  --anatomy-halo: #8a8a80;
+  --anatomy-halo-opacity: 0.32;
+  --anatomy-dot: #3a3a3e;
+  --anatomy-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --tf-liquid: #d3d6db;
+  --tf-liquid-top: #e4e6ea;
+  --tf-glass: #0000000a;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .iso.tfg-bench {
+    --anatomy-face: #1b1c21;
+    --anatomy-top: #1d1e23;
+    --anatomy-shade-0: #101114;
+    --anatomy-shade-1: #131418;
+    --anatomy-shade-2: #16171b;
+    --anatomy-shade-3: #191a1e;
+    --anatomy-lit-top: #26282d;
+    --anatomy-lit-shade: #1e1f24;
+    --anatomy-hi: #d4d4d4;
+    --anatomy-mid: #6a6a6a;
+    --anatomy-lo: #3e3e3e;
+    --anatomy-faint: #2a2a2a;
+    --anatomy-halo: #050505;
+    --anatomy-halo-opacity: 0.9;
+    --anatomy-dot: #e6e6e6;
+    --tf-liquid: #3a3e46;
+    --tf-liquid-top: #4b5059;
+    --tf-glass: #ffffff08;
+  }
+}
+
+.tfg-bench .iso-plate {
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.tfg-bench .iso-legend {
+  font-size: 14px;
+}
+
+.tf-host {
+  aspect-ratio: 600 / 340;
+}
+
+.tf-host .iso-svg {
+  width: 100%;
+  height: auto;
+}
+
+.tf-bit,
+.tf-drop {
+  fill: var(--anatomy-lit);
+}
+
+.tf-beam {
+  fill: none;
+  stroke: var(--anatomy-lit);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-dasharray: 0.01 3.2;
+}
+
+.tf-glass {
+  fill: var(--tf-glass);
+}
+
+.tf-liquid .iso-fill,
+.tf-liquid .iso-shade {
+  fill: var(--tf-liquid);
+}
+
+.tf-liquid .iso-top {
+  fill: var(--tf-liquid-top);
+}
+
+.tf-face {
+  fill: var(--anatomy-face);
+}
+
+.tf-window {
+  fill: var(--anatomy-shade-0);
+}
+
+.tf-digits {
+  font: 600 9px var(--anatomy-mono);
+  letter-spacing: 0.5px;
+  fill: var(--anatomy-strong);
+  font-variant-numeric: tabular-nums;
+}
+
+.tf-dial-text {
+  font: 500 3.6px var(--anatomy-mono);
+  letter-spacing: 0.3px;
+  fill: var(--anatomy-muted);
+}
+
+.tf-mark {
+  fill: var(--anatomy-hi);
+}
+
+.tf-hub {
+  fill: var(--anatomy-paper);
+  stroke: var(--anatomy-hi);
+  stroke-width: 0.6;
+}
+
+.tf-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.tfg-bench .iso-stage {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.tfg-bench .iso-stage:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 6px;
+}
+
+@media (max-width: 640px) {
+  .tfg-bench .iso-stage {
+    overflow: hidden;
+  }
+
+  .tfg-bench .tf-host .iso-svg {
+    width: 118%;
+    margin: -4% -9% -3%;
+  }
+}
