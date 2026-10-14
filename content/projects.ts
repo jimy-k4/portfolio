@@ -5,6 +5,7 @@ import aruateam from "@/assets/projects/aruateam.webp"
 import beaconSplit from "@/assets/projects/beacon-split.webp"
 import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
+import homie from "@/assets/projects/homie.webp"
 import mcloc from "@/assets/projects/mcloc.webp"
 import memojiMy from "@/assets/projects/memoji-my.webp"
 import nhoa from "@/assets/projects/nhoa.webp"
@@ -131,6 +132,33 @@ const projects: ProjectData[] = [
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas, cada una con su edad, y el editor de notas abierto",
+      },
+    },
+  },
+  {
+    slug: "homie",
+    title: "Homie",
+    year: "2026",
+    featured: false,
+    tech: ["React", "TypeScript", "Hono", "SQLite", "Drizzle", "PWA", "Docker"],
+    image: homie,
+    // Self-hosted, so there is no public page to visit.
+    link: null,
+    repo: null,
+    text: {
+      en: {
+        status: "In development",
+        description:
+          "The whole home in one app, shared in real time: shopping, receipts, money, pantry, meals, chores, maintenance and documents. It reads receipts with its own OCR, warns before anything expires or renews, and the shopping list works with no signal. Self-hosted, with passkeys, and the data never goes through a third party.",
+        imageAlt:
+          "Homie on the floor plan of a home: each room has the colour of its section and a piece of the app, like the pantry in the kitchen, chores in the bedroom and the money in the study, next to a phone with the home screen",
+      },
+      es: {
+        status: "En desarrollo",
+        description:
+          "Toda la casa en una app compartida en tiempo real: compra, tickets, finanzas, despensa, menú, tareas, mantenimiento y documentos. Lee los tickets con su propio OCR, avisa antes de que algo caduque o se renueve y la lista de la compra funciona sin cobertura. Autoalojada, con passkeys, y los datos no pasan por ningún tercero.",
+        imageAlt:
+          "Homie sobre el plano de una casa: cada habitación tiene el color de su sección y una pieza de la app, como la despensa en la cocina, las tareas en el dormitorio y las finanzas en el estudio, junto a un móvil con la pantalla de Inicio",
       },
     },
   },
