@@ -7,7 +7,7 @@ const en = {
   meta: {
     title: "Juan Llinares · Senior Full Stack Developer",
     description:
-      "Senior full stack developer and computer engineer in Alicante, Spain. I build Gym.y and Bruto, and help build Beacon Split: software that is easy to use and accessible to everyone. Open to freelance work.",
+      "Senior full stack developer and computer engineer in Alicante, Spain. I build Gym.y, made Bruto and compete in More than a Hack 2027, FC Barcelona's football data hackathon. Software that is easy to use and accessible to everyone. Open to freelance work.",
   },
   nav: {
     label: "Sections",
@@ -74,7 +74,7 @@ const es: Dictionary = {
   meta: {
     title: "Juan Llinares · Desarrollador Senior Full Stack",
     description:
-      "Desarrollador senior full stack e ingeniero informático en Alicante. Creo Gym.y y Bruto, y ayudo a construir Beacon Split: software fácil de usar y accesible para todos. Acepto encargos.",
+      "Desarrollador senior full stack e ingeniero informático en Alicante. Construyo Gym.y, hice Bruto y compito en More than a Hack 2027, el hackathon de datos de fútbol del FC Barcelona. Software fácil de usar y accesible para todos. Acepto encargos.",
   },
   nav: {
     label: "Secciones",

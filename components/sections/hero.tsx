@@ -12,13 +12,16 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 
 type Props = {
   dict: Dictionary
-  current: Project[]
+  projects: Project[]
   barca: Barca
   profile: ReturnType<typeof getProfile>
 }
 
-export function Hero({ dict, current, barca, profile }: Props) {
+export function Hero({ dict, projects, barca, profile }: Props) {
   const { hero } = dict
+  // A finished project keeps its large card and its award, but leaves "Now building".
+  const current = projects.filter((project) => project.current)
+  const featured = projects.filter((project) => project.featured)
 
   return (
     <section id="top" aria-labelledby="top-title" className="relative overflow-hidden">
@@ -49,7 +52,7 @@ export function Hero({ dict, current, barca, profile }: Props) {
               <BriefcaseBusiness aria-hidden="true" className="size-4 text-subtle" />
               {profile.availability}
             </li>
-            {current
+            {projects
               .filter((project) => project.award && project.awardUrl)
               .map((project) => (
                 <li key={project.slug}>
@@ -127,13 +130,13 @@ export function Hero({ dict, current, barca, profile }: Props) {
           </div>
         </div>
 
-        <ProjectStack projects={current} />
+        <ProjectStack projects={featured} />
       </div>
     </section>
   )
 }
 
-/** Decorative stack with the screenshots of the current projects; the chips carry the links. */
+/** Decorative stack with the screenshots of the featured projects; the cards below carry the links. */
 function ProjectStack({ projects }: { projects: Project[] }) {
   const [front, back] = projects
   if (!front || !back) return null

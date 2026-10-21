@@ -48,8 +48,9 @@ Everything visible lives in `content/`, separate from the components:
 | `content/site.ts`       | Site URL and contact links                                       |
 
 To add a project, drop a 16:10 screenshot in `assets/projects/` (WebP around 1600 px wide) and add
-an entry to `content/projects.ts`. Projects with `featured: true` get the large cards and appear
-under _Now building_ in the hero; `current: true` lists a small card there too. Use `link: null` for a project with no public page to visit (the
+an entry to `content/projects.ts`. Projects with `featured: true` get the large cards and their
+screenshots in the hero; `current: true` lists them under _Now building_. A finished project keeps
+its card: drop `current` and say so in its `status`. Use `link: null` for a project with no public page to visit (the
 card is then not clickable) and `repo: null` when its code is private.
 
 The Barça section has its own panel above the projects, in the club's colours. As the competition
