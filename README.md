@@ -41,6 +41,7 @@ Everything visible lives in `content/`, separate from the components:
 
 | File                    | What it holds                                                    |
 | ----------------------- | ---------------------------------------------------------------- |
+| `content/barca.ts`      | More than a Hack 2027, the hackathon with FC Barcelona           |
 | `content/projects.ts`   | Projects: links, tech, year, image and the text in each language |
 | `content/experience.ts` | Jobs. `show: false` hides one without deleting it                |
 | `content/dictionary.ts` | Interface text (navigation, headings, buttons)                   |
@@ -51,6 +52,10 @@ an entry to `content/projects.ts`. Projects with `featured: true` get the large 
 under _Now building_ in the hero; `current: true` lists a small card there too. Use `link: null` for a project with no public page to visit (the
 card is then not clickable) and `repo: null` when its code is private.
 
+The Barça section has its own panel above the projects, in the club's colours. As the competition
+goes on, move `phase` forward in `content/barca.ts` and update `status` in both languages: the
+timeline marks that phase as _Now_.
+
 ## Project structure
 
 ```
@@ -59,8 +64,8 @@ app/
   globals.css        design tokens (colours, fonts) and animations
   icon.svg, robots.ts, sitemap.ts
 assets/projects/     project screenshots
-components/          header, project card, copy button, icons
-  sections/          hero, projects, trajectory, contact, footer
+components/          header, project card, copy button, icons, FC Barcelona crest
+  sections/          hero, barca, projects, trajectory, contact, footer
   figures/           interactive figures: the radiation bench under the thesis entry
   iso/               the Anatomy kit (MIT) the figures are drawn with
 content/             all the text and data

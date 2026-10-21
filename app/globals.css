@@ -15,6 +15,12 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-accent-text: var(--accent-text);
+
+  /* FC Barcelona's colours, only for the Barça section. The same in light and dark. */
+  --color-barca-blau: #004d98;
+  --color-barca-grana: #a50044;
+  --color-barca-gold: #edbb00;
+  --color-barca-navy: #0b1633;
 }
 
 /* Light and dark follow the system setting. Text colours keep at least 4.5:1 on --bg and --surface. */
@@ -81,6 +87,33 @@
     color-mix(in oklch, var(--accent) 22%, transparent),
     transparent 70%
   );
+}
+
+/* The Barça panel: deep navy lit in blau and grana. White text keeps well over 7:1 on all of it. */
+@utility blaugrana {
+  background-color: var(--color-barca-navy);
+  background-image:
+    radial-gradient(55rem 30rem at 100% 0%, color-mix(in oklch, var(--color-barca-grana) 50%, transparent), transparent 70%),
+    radial-gradient(50rem 28rem at 0% 100%, color-mix(in oklch, var(--color-barca-blau) 55%, transparent), transparent 70%);
+
+  & :focus-visible {
+    outline-color: white;
+  }
+}
+
+/* The shirt's stripes, fading out before they reach the text. */
+@utility blaugrana-stripes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-barca-blau) 0 3rem,
+    var(--color-barca-grana) 3rem 6rem
+  );
+  opacity: 0.3;
+  mask-image: linear-gradient(100deg, transparent 40%, black 95%);
+}
+
+@utility crest {
+  filter: drop-shadow(0 1.5rem 2.5rem rgb(0 0 0 / 0.45));
 }
 
 @media (prefers-reduced-motion: no-preference) {

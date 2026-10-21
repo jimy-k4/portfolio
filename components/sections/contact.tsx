@@ -16,7 +16,7 @@ export function Contact({ dict }: { dict: Dictionary }) {
 
       <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-36">
         <p className="font-mono text-xs tracking-[0.2em] text-subtle uppercase">
-          <span className="text-accent-text">03</span> / {text.label}
+          <span className="text-accent-text">04</span> / {text.label}
         </p>
         <h2
           id="contact-title"
