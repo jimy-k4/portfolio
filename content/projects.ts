@@ -1,16 +1,11 @@
 import type { StaticImageData } from "next/image"
 import type { Locale } from "@/lib/i18n"
 
-import aruateam from "@/assets/projects/aruateam.webp"
 import beaconSplit from "@/assets/projects/beacon-split.webp"
 import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
 import homie from "@/assets/projects/homie.webp"
-import mcloc from "@/assets/projects/mcloc.webp"
-import memojiMy from "@/assets/projects/memoji-my.webp"
 import nhoa from "@/assets/projects/nhoa.webp"
-import particleLife from "@/assets/projects/particle-life.webp"
-import superveil from "@/assets/projects/superveil.webp"
 
 type ProjectText = {
   description: string
@@ -209,121 +204,6 @@ const projects: ProjectData[] = [
         description:
           "Portfolio para Ainhoa Franco, de marketing, publicidad y relaciones públicas: diseño editorial, su trabajo contado como casos de campaña y todo el contenido editable desde un solo fichero.",
         imageAlt: "Portada del portfolio de Ainhoa Franco Granja, con su nombre en grande y el logotipo redondo de nhoa",
-      },
-    },
-  },
-  {
-    slug: "superveil",
-    title: "Superveil",
-    year: "2026",
-    featured: false,
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Playwright"],
-    image: superveil,
-    // The dashboard is behind a password, so there is nothing public to visit.
-    link: null,
-    repo: null,
-    text: {
-      en: {
-        description:
-          "The traffic of all my sites on one screen: visits, who is on them right now and where people come from. One line adds a site, it uses no cookies and the data stays in my own database.",
-        imageAlt:
-          "Superveil dashboard with today's visits and one card per project, each with a screenshot of the site and its chart for the week",
-      },
-      es: {
-        description:
-          "El tráfico de todas mis webs en una pantalla: visitas, quién está dentro ahora mismo y de dónde llega la gente. Una línea añade una web, no usa cookies y los datos se quedan en mi propia base de datos.",
-        imageAlt:
-          "Panel de Superveil con las visitas de hoy y una tarjeta por proyecto, cada una con una captura de la web y su gráfica de la semana",
-      },
-    },
-  },
-  {
-    slug: "mcloc",
-    title: "MCLoc",
-    year: "2025",
-    featured: false,
-    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-    image: mcloc,
-    link: "https://mcloc.vercel.app/",
-    repo: "https://github.com/jimy-k4/mcloc",
-    text: {
-      en: {
-        description:
-          "A coordinates tracker for Minecraft: save bases, portals and structures by world and dimension, see them on a map, measure distances and convert them to the Nether. It also has tools, like a pixel-perfect circle generator.",
-        imageAlt: "MCLoc circle generator drawing a circle of green blocks",
-      },
-      es: {
-        description:
-          "Un rastreador de coordenadas para Minecraft: guarda bases, portales y estructuras por mundo y dimensión, míralos en un mapa, mide distancias y conviértelas al Nether. Trae herramientas, como un generador de círculos pixel-perfect.",
-        imageAlt: "Generador de círculos de MCLoc dibujando un círculo de bloques verdes",
-      },
-    },
-  },
-  {
-    slug: "aruateam",
-    title: "aruateam",
-    year: "2024",
-    featured: false,
-    tech: ["Next.js", "Tailwind CSS", "Node.js", "Koa", "Prisma"],
-    image: aruateam,
-    link: "https://new-aruateam-frontend.vercel.app/",
-    repo: "https://github.com/hxst1/aruateam",
-    credit: edu,
-    text: {
-      en: {
-        description:
-          "Website for the drift team aruateam. The first version had a public site, a CMS for the team and its own backend; today it lives on as the team's shop.",
-        imageAlt: "aruateam shop with drift team merchandise",
-      },
-      es: {
-        description:
-          "Web del equipo de drift aruateam. La primera versión tenía web pública, un CMS para el equipo y backend propio; hoy sigue viva como la tienda del equipo.",
-        imageAlt: "Tienda de aruateam con productos del equipo de drift",
-      },
-    },
-  },
-  {
-    slug: "particle-life",
-    title: "Particle Life",
-    year: "2024",
-    featured: false,
-    tech: ["JavaScript", "p5.js", "HTML", "CSS"],
-    image: particleLife,
-    link: "https://particle-life-arua.vercel.app/",
-    repo: "https://github.com/jimy-k4/particle-life",
-    credit: edu,
-    text: {
-      en: {
-        description:
-          "Artificial life in 2D: particles of each colour attract or repel the others following a matrix of rules, and patterns that look alive emerge from them. Every parameter can be tuned live.",
-        imageAlt: "Particle Life simulation running on a laptop",
-      },
-      es: {
-        description:
-          "Vida artificial en 2D: las partículas de cada color atraen o repelen a las demás según una matriz de reglas, y de ahí surgen patrones que parecen vivos. Cada parámetro se ajusta en directo.",
-        imageAlt: "Simulación de Particle Life en un portátil",
-      },
-    },
-  },
-  {
-    slug: "memoji-my",
-    title: "Memoji-my",
-    year: "2024",
-    featured: false,
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "DiceBear"],
-    image: memojiMy,
-    link: "https://memoji-my.vercel.app/",
-    repo: "https://github.com/jimy-k4/memoji-my",
-    text: {
-      en: {
-        description:
-          "A memory game with new characters every match: the avatars are generated with the DiceBear API, in the style you pick, with light and dark mode.",
-        imageAlt: "Three screens of the Memoji-my memory game with different avatar styles",
-      },
-      es: {
-        description:
-          "Un juego de memoria con personajes nuevos en cada partida: los avatares se generan con la API de DiceBear, en el estilo que elijas, con modo claro y oscuro.",
-        imageAlt: "Tres pantallas del juego de memoria Memoji-my con distintos estilos de avatar",
       },
     },
   },
