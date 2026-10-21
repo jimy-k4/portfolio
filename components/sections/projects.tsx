@@ -25,7 +25,7 @@ export function Projects({ dict, projects }: Props) {
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
         <SectionHeading
           id="projects-title"
-          index="01"
+          index="02"
           label={dict.work.label}
           title={dict.work.title}
           subtitle={dict.work.subtitle}

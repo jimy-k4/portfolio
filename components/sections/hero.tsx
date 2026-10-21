@@ -1,20 +1,23 @@
 import Image from "next/image"
 import { ArrowDown, BriefcaseBusiness, Mail, MapPin, Trophy } from "lucide-react"
 
+import type { Barca } from "@/content/barca"
 import type { Dictionary } from "@/content/dictionary"
 import type { getProfile } from "@/content/profile"
 import type { Project } from "@/content/projects"
 import { contact } from "@/content/site"
+import { BarcaCrest } from "@/components/barca-crest"
 import { ExternalLink } from "@/components/external-link"
 import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 
 type Props = {
   dict: Dictionary
   current: Project[]
+  barca: Barca
   profile: ReturnType<typeof getProfile>
 }
 
-export function Hero({ dict, current, profile }: Props) {
+export function Hero({ dict, current, barca, profile }: Props) {
   const { hero } = dict
 
   return (
@@ -105,6 +108,13 @@ export function Hero({ dict, current, profile }: Props) {
               </span>
               {hero.nowBuilding}
             </span>
+            <a
+              href="#barca"
+              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-line bg-surface/60 pr-4 pl-2.5 text-sm font-medium backdrop-blur transition-colors hover:border-line-strong"
+            >
+              <BarcaCrest className="size-6" />
+              {barca.chip}
+            </a>
             {current.map((project) => (
               <a
                 key={project.slug}

@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation"
 
+import { getBarca } from "@/content/barca"
 import { getDictionary } from "@/content/dictionary"
 import { getExperience } from "@/content/experience"
 import { getProfile } from "@/content/profile"
 import { getProjects } from "@/content/projects"
 import { contact, site } from "@/content/site"
 import { SiteHeader } from "@/components/site-header"
+import { Barca } from "@/components/sections/barca"
 import { Contact } from "@/components/sections/contact"
 import { Footer } from "@/components/sections/footer"
 import { Hero } from "@/components/sections/hero"
@@ -20,6 +22,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const dict = getDictionary(lang)
   const projects = getProjects(lang)
   const profile = getProfile(lang)
+  const barca = getBarca(lang)
 
   const person = {
     "@context": "https://schema.org",
@@ -44,7 +47,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </a>
       <SiteHeader locale={lang} nav={dict.nav} />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Hero dict={dict} current={projects.filter((project) => project.featured || project.current)} profile={profile} />
+        <Hero
+          dict={dict}
+          current={projects.filter((project) => project.featured || project.current)}
+          barca={barca}
+          profile={profile}
+        />
+        <Barca dict={dict} barca={barca} />
         <Projects dict={dict} projects={projects} />
         <Trajectory locale={lang} dict={dict} experience={getExperience(lang)} profile={profile} />
         <Contact dict={dict} />

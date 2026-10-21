@@ -24,7 +24,7 @@ export function Trajectory({ locale, dict, experience, profile }: Props) {
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
         <SectionHeading
           id="trajectory-title"
-          index="02"
+          index="03"
           label={labels.label}
           title={labels.title}
           subtitle={labels.subtitle}
