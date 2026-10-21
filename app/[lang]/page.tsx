@@ -47,12 +47,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </a>
       <SiteHeader locale={lang} nav={dict.nav} />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Hero
-          dict={dict}
-          current={projects.filter((project) => project.featured || project.current)}
-          barca={barca}
-          profile={profile}
-        />
+        <Hero dict={dict} projects={projects} barca={barca} profile={profile} />
         <Barca dict={dict} barca={barca} />
         <Projects dict={dict} projects={projects} />
         <Trajectory locale={lang} dict={dict} experience={getExperience(lang)} profile={profile} />

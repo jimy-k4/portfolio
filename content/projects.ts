@@ -22,8 +22,9 @@ type ProjectData = {
   slug: string
   title: string
   year: string
+  /** A large card, and one of the screenshots in the hero. */
   featured: boolean
-  /** Listed under "Now building" in the hero without getting a large card. */
+  /** Still being built: listed under "Now building" in the hero. */
   current?: boolean
   tech: string[]
   image: StaticImageData
@@ -52,6 +53,7 @@ const projects: ProjectData[] = [
     title: "Gym.y",
     year: "2026",
     featured: true,
+    current: true,
     tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "PWA", "Web Push"],
     image: gymy,
     link: "https://gym-y.vercel.app/",
@@ -101,7 +103,7 @@ const projects: ProjectData[] = [
     awardUrl: "https://www.producthunt.com/leaderboard/daily/2026/9/30",
     text: {
       en: {
-        status: "Open source",
+        status: "Finished · open source",
         award: "#14 of the day on Product Hunt",
         description:
           "A brutalist, local-first task board for building projects with AI. It started as a tool for my own work at gtt and I use it every day: the notes live in a file inside each project, so you and any assistant work from the same source.",
@@ -115,7 +117,7 @@ const projects: ProjectData[] = [
         imageAlt: "Bruto board with notes connected by arrows, each with its age, and the note editor open",
       },
       es: {
-        status: "Código abierto",
+        status: "Terminado · código abierto",
         award: "#14 del día en Product Hunt",
         description:
           "Un tablero de tareas brutalista y local-first para construir proyectos con IA. Nació como herramienta para mi trabajo en gtt y hoy lo uso cada día: las notas viven en un fichero dentro de cada proyecto, así que tú y cualquier asistente trabajáis sobre la misma fuente.",
@@ -162,7 +164,6 @@ const projects: ProjectData[] = [
     title: "Beacon Split",
     year: "2026",
     featured: false,
-    current: true,
     tech: ["Tauri", "Rust", "React", "TypeScript", "xterm.js"],
     image: beaconSplit,
     link: "https://beacon-split.vercel.app/",
@@ -170,16 +171,16 @@ const projects: ProjectData[] = [
     credit: edu,
     text: {
       en: {
-        status: "In development",
+        status: "Finished",
         description:
-          "Edu Ruiz's workspace for running several Claude Code sessions at once, each with real terminals, files and git, and a tab that says which one is waiting for an answer. I ported it to Windows (a new transport to its background daemon, Windows' pseudo-console and an installer) and keep building it with him.",
+          "Edu Ruiz's workspace for running several Claude Code sessions at once, each with real terminals, files and git, and a tab that says which one is waiting for an answer. I ported it to Windows (a new transport to its background daemon, Windows' pseudo-console and an installer) and kept building it with him until it was done.",
         imageAlt:
           "Beacon Split window with project tabs along the top, a Claude Code session on the left and the project's files and git changes on the right",
       },
       es: {
-        status: "En desarrollo",
+        status: "Terminado",
         description:
-          "El espacio de trabajo de Edu Ruiz para llevar varias sesiones de Claude Code a la vez, cada una con sus terminales, ficheros y git, y una pestaña que te dice cuál está esperando respuesta. Lo porté a Windows (un transporte nuevo hasta su daemon en segundo plano, la consola virtual de Windows y un instalador) y sigo construyéndolo con él.",
+          "El espacio de trabajo de Edu Ruiz para llevar varias sesiones de Claude Code a la vez, cada una con sus terminales, ficheros y git, y una pestaña que te dice cuál está esperando respuesta. Lo porté a Windows (un transporte nuevo hasta su daemon en segundo plano, la consola virtual de Windows y un instalador) y seguí construyéndolo con él hasta terminarlo.",
         imageAlt:
           "Ventana de Beacon Split con las pestañas de proyectos arriba, una sesión de Claude Code a la izquierda y los ficheros y cambios de git del proyecto a la derecha",
       },
