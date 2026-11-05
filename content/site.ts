@@ -5,7 +5,7 @@ export const site = {
 }
 
 export const contact = {
-  email: "jllinaresmauri@gmail.com",
+  email: "jllinaresjobs@gmail.com",
   linkedin: "https://www.linkedin.com/in/juan-llinares-mauri/",
   github: "https://github.com/jimy-k4",
   kofi: "https://ko-fi.com/jimy_k4",
