@@ -156,7 +156,7 @@ const projects: ProjectData[] = [
           "Each page opens offline with no server; the logbook keeps the service history in Postgres on Neon.",
         ],
         imageAlt:
-          "Two kawa-anatomy figures in dark mode: the whole bike in isometric line drawing on its base, and the engine inside out with the crankshaft, cam chain, valves and oil pan",
+          "kawa-anatomy cover: the ZX-6R G with its fairing, tank and seats in isometric drawing, the engine running inside out with its pistons, cam chain and oil, and the card of a part with its part number, torque and manual page",
       },
       es: {
         status: "En desarrollo",
@@ -170,7 +170,7 @@ const projects: ProjectData[] = [
           "Cada página se abre sin conexión ni servidor; el libro de taller guarda el historial en Postgres, en Neon.",
         ],
         imageAlt:
-          "Dos figuras de kawa-anatomy en modo oscuro: la moto entera en dibujo isométrico de líneas sobre su base, y el motor por dentro con el cigüeñal, la cadena de distribución, las válvulas y el cárter",
+          "Portada de kawa-anatomy: la ZX-6R G con su carenado, depósito y asientos en dibujo isométrico, el motor por dentro en marcha con sus pistones, la cadena de distribución y el aceite, y la ficha de una pieza con su número, su par de apriete y la página del manual",
       },
     },
   },
