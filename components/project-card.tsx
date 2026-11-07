@@ -10,22 +10,29 @@ type Props = {
   project: Project
   labels: Dictionary["work"]
   featured?: boolean
+  /** Spans both columns of the featured grid, with the image beside the text on large screens. */
+  wide?: boolean
 }
 
-export function ProjectCard({ project, labels, featured = false }: Props) {
+export function ProjectCard({ project, labels, featured = false, wide = false }: Props) {
   return (
     <article
       id={project.slug}
-      className="reveal group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-colors duration-300 focus-within:border-line-strong hover:border-line-strong"
+      className={`reveal group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-colors duration-300 focus-within:border-line-strong hover:border-line-strong ${wide ? "lg:col-span-2 lg:grid lg:grid-cols-2" : ""}`}
     >
-      <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-bg">
-        <Image
-          src={project.image}
-          alt={project.imageAlt}
-          placeholder="blur"
-          sizes={featured ? "(min-width: 1152px) 560px, (min-width: 1024px) 50vw, 100vw" : "(min-width: 1152px) 368px, (min-width: 768px) 33vw, 100vw"}
-          className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
-        />
+      {/* Wide, the screenshot keeps its 16:10 framed in the middle of its half rather than being cropped to the text's height. */}
+      <div className={wide ? "contents lg:flex lg:items-center lg:border-r lg:border-line lg:p-8" : "contents"}>
+        <div
+          className={`relative aspect-[16/10] overflow-hidden border-b border-line bg-bg ${wide ? "lg:w-full lg:rounded-2xl lg:border" : ""}`}
+        >
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            placeholder="blur"
+            sizes={featured ? "(min-width: 1152px) 560px, (min-width: 1024px) 50vw, 100vw" : "(min-width: 1152px) 368px, (min-width: 768px) 33vw, 100vw"}
+            className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
+          />
+        </div>
       </div>
 
       <div className={`flex flex-1 flex-col ${featured ? "p-6 sm:p-8" : "p-6"}`}>

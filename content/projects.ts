@@ -5,6 +5,7 @@ import beaconSplit from "@/assets/projects/beacon-split.webp"
 import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
 import homie from "@/assets/projects/homie.webp"
+import kawaAnatomy from "@/assets/projects/kawa-anatomy.webp"
 import nhoa from "@/assets/projects/nhoa.webp"
 
 type ProjectText = {
@@ -129,6 +130,47 @@ const projects: ProjectData[] = [
           "Sin cuenta ni servidor: se instala como app, funciona sin conexión y está en 9 idiomas.",
         ],
         imageAlt: "Tablero de Bruto con notas unidas por flechas, cada una con su edad, y el editor de notas abierto",
+      },
+    },
+  },
+  {
+    slug: "kawa-anatomy",
+    title: "kawa-anatomy",
+    year: "2026",
+    featured: true,
+    current: true,
+    tech: ["JavaScript", "SVG", "Node.js", "Anatomy kit", "Neon", "Vercel"],
+    image: kawaAnatomy,
+    link: "https://kawa-anatomy.vercel.app/",
+    repo: null,
+    text: {
+      en: {
+        status: "In development",
+        description:
+          "My Kawasaki ZX-6R, piece by piece: interactive isometric drawings of every system on the bike, built from the factory service manual and the parts microfiche, plus a workshop logbook of what it needs and what has been done to it.",
+        highlights: [
+          "Twelve systems, each its own figure in the same world and camera: front brake, fork, cooling, engine, fuel, gearbox, chassis, wheels, exhaust, bodywork and electrics.",
+          "Every part carries its part number, how many the bike has, its tightening torque and the manual pages. The figures come apart in three stages and turn in 30° steps, each view with its own exact paint order.",
+          "They work live: the engine runs its four strokes, the coolant flows and the thermostat opens with temperature, the rear suspension compresses with the manual's progressive linkage, and the ignition key shows which wires conduct.",
+          "Curved bodywork drawn as surfaces sampled into isometric faces, with marching squares and light bands, something the drawing kit did not do.",
+          "Each page opens offline with no server; the logbook keeps the service history in Postgres on Neon.",
+        ],
+        imageAlt:
+          "Two kawa-anatomy figures in dark mode: the whole bike in isometric line drawing on its base, and the engine inside out with the crankshaft, cam chain, valves and oil pan",
+      },
+      es: {
+        status: "En desarrollo",
+        description:
+          "Mi Kawasaki ZX-6R pieza a pieza: dibujos isométricos e interactivos de cada sistema de la moto, hechos con el manual de taller y la microficha de recambios, y un libro de taller con lo que le toca y lo que se le ha hecho.",
+        highlights: [
+          "Doce sistemas, cada uno con su figura en el mismo mundo y con la misma cámara: freno delantero, horquilla, refrigeración, motor, alimentación, cambio, chasis, ruedas, escape, carrocería y sistema eléctrico.",
+          "Cada pieza lleva su número de recambio, cuántas lleva la moto, su par de apriete y las páginas del manual. Las figuras se desmontan en tres tiempos y giran de 30 en 30°, cada vista con su orden de pintado exacto.",
+          "Funcionan en vivo: el motor hace sus cuatro tiempos, el agua corre y el termostato abre con la temperatura, la suspensión trasera se hunde con las bieletas progresivas del manual y la llave dice qué hilos conducen.",
+          "La carrocería curva, dibujada como superficies muestreadas en caras isométricas con marching squares y bandas de luz, algo que el kit de dibujo no hacía.",
+          "Cada página se abre sin conexión ni servidor; el libro de taller guarda el historial en Postgres, en Neon.",
+        ],
+        imageAlt:
+          "Dos figuras de kawa-anatomy en modo oscuro: la moto entera en dibujo isométrico de líneas sobre su base, y el motor por dentro con el cigüeñal, la cadena de distribución, las válvulas y el cárter",
       },
     },
   },

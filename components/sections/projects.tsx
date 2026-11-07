@@ -32,8 +32,15 @@ export function Projects({ dict, projects }: Props) {
         />
 
         <div className="mt-14 grid gap-5 lg:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.slug} project={project} labels={dict.work} featured />
+          {featured.map((project, index) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              labels={dict.work}
+              featured
+              // An odd one out takes the whole last row, image beside the text, instead of half of it.
+              wide={featured.length % 2 === 1 && index === featured.length - 1}
+            />
           ))}
         </div>
 
