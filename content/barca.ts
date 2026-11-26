@@ -1,11 +1,10 @@
 import type { AccentTitle } from "@/content/dictionary"
 import type { Locale } from "@/lib/i18n"
 
-/** More than a Hack 2027, the football data hackathon with FC Barcelona. It has its own section, above the projects. */
+/** More than a Hack 2027, the football data hackathon with FC Barcelona, under "Off the clock". */
 export type Barca = {
-  label: string
   kicker: string
-  /** Where the competition stands, shown as a badge. Update it with `phase` below. */
+  /** Where the competition stands for us, shown as a badge. */
   status: string
   title: AccentTitle
   description: string
@@ -13,11 +12,12 @@ export type Barca = {
   highlights: string[]
   stats: { value: string; label: string }[]
   phases: { dates: string; title: string; detail: string; who: string }[]
+  /** Badge on the last phase we played (`phase` below). */
   now: string
+  /** Note on the phases after it, which we did not reach. */
+  out: string
   links: { label: string; url: string }[]
   crestLabel: string
-  /** Text for the chip in the hero. */
-  chip: string
 }
 
 type BarcaText = Omit<Barca, "links"> & { links: Record<keyof typeof urls, string> }
@@ -29,26 +29,26 @@ const urls = {
   challenge: "https://landing.mobileworldcapital.com/more-than-a-hack-2027",
 }
 
-/** Index in `phases` of the one being played now. Move it forward as the competition goes on. */
+/** Index in `phases` of the last one we played. The ones after it show as not reached. */
 export const phase = 0
 
 const text: Record<Locale, BarcaText> = {
   en: {
-    label: "Barça",
     kicker: "More than a Hack 2027 · Talent Arena, Barcelona",
-    status: "Phase 1 · in play",
+    status: "Finished · 374th of 800",
     title: { before: "Who has ", em: "the ball", after: "?" },
     description:
       "The football data hackathon by FC Barcelona, Metrica Sports and Mobile World Capital Barcelona. One full LaLiga match, Barça against Athletic Club, with automatic tracking of every player and the ball, and one question: which team has the ball, frame by frame. A script scores it against the real answer, with no jury.",
     highlights: [
-      "I compete with GTT, a team of five. We study first, write down what we find and only then code, and every experiment goes in the log, failures included.",
-      "I built the team's website and its log. An entry can draw timelines and pitches whose scores come from a TypeScript port of the official metric, so no number is typed by hand.",
-      "I wrote the first studies: what the metric really rewards, and why tuning against the five public minutes would mislead us.",
+      "I competed with GTT, a team of five. We studied first, wrote down what we found and only then coded, and every experiment went in the log, failures included.",
+      "Our model finds the single best sequence of possessions for each half with an exact Viterbi decoder, and fills the frames without a clear ball with a model trained only on other matches. It runs in under 30 seconds on a CPU, the same every time, and anyone can reproduce it in Docker.",
+      "I built the team's website and its log, where the scores of the timelines and pitches come from a TypeScript port of the official metric, and wrote the first studies: what the metric really rewards, and why tuning against the five public minutes would mislead us.",
+      "We finished 374th of 800 and did not reach the top 20 of the second phase. The repository, the technical document and the log stay public.",
     ],
     stats: [
-      { value: "199,319", label: "frames to label" },
+      { value: "374 / 800", label: "our place in the final ranking" },
+      { value: "199,319", label: "frames labelled" },
       { value: "41%", label: "of the scored frames with the ball out of sight" },
-      { value: "0.2433", label: "baseline spellF1 to beat" },
       { value: "5", label: "people, one codebase" },
     ],
     phases: [
@@ -71,7 +71,8 @@ const text: Record<Locale, BarcaText> = {
         who: "Top 5",
       },
     ],
-    now: "Now",
+    now: "374th of 800",
+    out: "We did not reach it",
     links: {
       site: "Team website",
       log: "Project log",
@@ -79,24 +80,23 @@ const text: Record<Locale, BarcaText> = {
       challenge: "The challenge",
     },
     crestLabel: "FC Barcelona crest",
-    chip: "More than a Hack",
   },
   es: {
-    label: "Barça",
     kicker: "More than a Hack 2027 · Talent Arena, Barcelona",
-    status: "Fase 1 · en juego",
+    status: "Terminado · puesto 374 de 800",
     title: { before: "¿Quién tiene ", em: "el balón", after: "?" },
     description:
       "El hackathon de datos de fútbol del FC Barcelona, Metrica Sports y Mobile World Capital Barcelona. Un partido entero de LaLiga, Barça–Athletic Club, con el seguimiento automático de cada jugador y del balón, y una sola pregunta: qué equipo tiene el balón, fotograma a fotograma. Lo puntúa un script contra la respuesta real, sin jurado.",
     highlights: [
-      "Compito con GTT, un equipo de cinco. Primero estudiamos, escribimos lo que encontramos y solo entonces programamos, y cada experimento va al log, también los fallos.",
-      "Hice la web del equipo y su log. Una entrada puede dibujar líneas de tiempo y campos cuyas puntuaciones salen de la métrica oficial portada a TypeScript, así que ningún número se escribe a mano.",
-      "Escribí los primeros estudios: qué premia de verdad la métrica y por qué ajustar contra los cinco minutos públicos nos engañaría.",
+      "Competí con GTT, un equipo de cinco. Primero estudiábamos, escribíamos lo que encontrábamos y solo entonces programábamos, y cada experimento iba al log, también los fallos.",
+      "Nuestro modelo busca la mejor secuencia de posesiones de cada parte con un decodificador de Viterbi exacto, y rellena los fotogramas sin un balón claro con un modelo entrenado solo con otros partidos. Tarda menos de 30 segundos en una CPU, da siempre lo mismo y cualquiera puede reproducirlo en Docker.",
+      "Hice la web del equipo y su log, donde las puntuaciones de las líneas de tiempo y los campos salen de la métrica oficial portada a TypeScript, y escribí los primeros estudios: qué premia de verdad la métrica y por qué ajustar contra los cinco minutos públicos nos engañaría.",
+      "Quedamos en el puesto 374 de 800 y no entramos en el top 20 de la segunda fase. El repositorio, la memoria técnica y el log siguen públicos.",
     ],
     stats: [
-      { value: "199.319", label: "fotogramas que etiquetar" },
+      { value: "374 / 800", label: "nuestro puesto en la clasificación final" },
+      { value: "199.319", label: "fotogramas etiquetados" },
       { value: "41\u00a0%", label: "de los fotogramas puntuados, sin el balón a la vista" },
-      { value: "0,2433", label: "spellF1 de referencia que superar" },
       { value: "5", label: "personas, un solo repositorio" },
     ],
     phases: [
@@ -119,7 +119,8 @@ const text: Record<Locale, BarcaText> = {
         who: "Top 5",
       },
     ],
-    now: "Ahora",
+    now: "Puesto 374 de 800",
+    out: "No llegamos",
     links: {
       site: "Web del equipo",
       log: "Log del proyecto",
@@ -127,7 +128,6 @@ const text: Record<Locale, BarcaText> = {
       challenge: "El reto",
     },
     crestLabel: "Escudo del FC Barcelona",
-    chip: "More than a Hack",
   },
 }
 

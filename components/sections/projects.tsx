@@ -13,7 +13,9 @@ type Props = {
   projects: Project[]
 }
 
-export function Projects({ dict, projects }: Props) {
+export function Projects({ dict, projects: all }: Props) {
+  // The anatomies have their own section.
+  const projects = all.filter((project) => !project.group)
   const featured = projects.filter((project) => project.featured)
   const others = projects.filter((project) => !project.featured)
   // The "More on GitHub" card takes whatever the last row of three leaves free: one gap, two, or a full row.
@@ -25,7 +27,7 @@ export function Projects({ dict, projects }: Props) {
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
         <SectionHeading
           id="projects-title"
-          index="02"
+          index="01"
           label={dict.work.label}
           title={dict.work.title}
           subtitle={dict.work.subtitle}

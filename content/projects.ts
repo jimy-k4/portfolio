@@ -6,6 +6,7 @@ import bruto from "@/assets/projects/bruto.webp"
 import gymy from "@/assets/projects/gymy.webp"
 import homie from "@/assets/projects/homie.webp"
 import kawaAnatomy from "@/assets/projects/kawa-anatomy.webp"
+import lexusAnatomy from "@/assets/projects/lexus-anatomy.webp"
 import nhoa from "@/assets/projects/nhoa.webp"
 
 type ProjectText = {
@@ -27,6 +28,8 @@ type ProjectData = {
   featured: boolean
   /** Still being built: listed under "Now building" in the hero. */
   current?: boolean
+  /** Shown in its own section instead of with the other projects: "anatomy" for the viewers of my own vehicles. */
+  group?: "anatomy"
   tech: string[]
   image: StaticImageData
   /** Live site, or `null` when there is no public page to visit. */
@@ -139,6 +142,7 @@ const projects: ProjectData[] = [
     year: "2026",
     featured: true,
     current: true,
+    group: "anatomy",
     tech: ["JavaScript", "SVG", "Node.js", "Anatomy kit", "Neon", "Vercel"],
     image: kawaAnatomy,
     link: "https://kawa-anatomy.vercel.app/",
@@ -171,6 +175,46 @@ const projects: ProjectData[] = [
         ],
         imageAlt:
           "Portada de kawa-anatomy: la ZX-6R G entera en dibujo isométrico, el motor por dentro en marcha con sus pistones, la cadena de distribución y el aceite, y la ficha de una pieza con su número, su par de apriete y la página del manual",
+      },
+    },
+  },
+  {
+    slug: "lexus-anatomy",
+    title: "lexus-anatomy",
+    year: "2026",
+    featured: true,
+    current: true,
+    group: "anatomy",
+    tech: ["JavaScript", "SVG", "Node.js", "Anatomy kit", "Vercel"],
+    image: lexusAnatomy,
+    link: "https://lexus-anatomy.vercel.app/",
+    repo: null,
+    text: {
+      en: {
+        status: "In development",
+        description:
+          "My 2000 Lexus IS200, wire by wire: the drawings of kawa-anatomy taken to a whole car, built from Toyota's repair manual and the parts catalogue for its own VIN, with a guided electrical diagnosis and a workshop logbook.",
+        highlights: [
+          "Six systems in one car: engine and gearbox, transmission and steering, suspension and brakes, interior, electrics, and the body cut into its 43 panels. 1,333 parts, each with its EPC reference and where it comes from.",
+          "The electrical system is simulated: turn the key to LOCK, ACC, ON or START, work a control, and the 89 harness runs light up with voltage, current or return to ground.",
+          "A guided diagnosis for eleven faults, from a starter that will not turn to an SRS light that skips its check. It asks first what can be seen, then what to measure with the multimeter, and the expected readings come from the circuit simulator.",
+          "A parts finder by name in Spanish or English, OEM reference or diagram code, and a logbook with the manual's service schedule.",
+        ],
+        imageAlt:
+          "lexus-anatomy cover: the IS200's electrical system in isometric drawing with the engine running, its harnesses lit by voltage, current and return to ground, and the card of the main engine-room harness with its EPC reference",
+      },
+      es: {
+        status: "En desarrollo",
+        description:
+          "Mi Lexus IS200 del 2000, cable a cable: los dibujos de kawa-anatomy llevados a un coche entero, hechos con el manual de reparación de Toyota y el catálogo de recambios de su propio bastidor, con un diagnóstico eléctrico guiado y un libro de taller.",
+        highlights: [
+          "Seis sistemas en un coche: motor y cambio, transmisión y dirección, suspensión y frenos, interior, sistema eléctrico y la carrocería cortada en sus 43 paneles. 1333 piezas, cada una con su referencia del EPC y su fuente.",
+          "El sistema eléctrico está simulado: pon la llave en LOCK, ACC, ON o arranque, acciona un mando y los 89 tramos de mazo se encienden con tensión, corriente o retorno a masa.",
+          "Un diagnóstico guiado para once averías, desde un motor de arranque que no gira hasta un testigo SRS que no hace el chequeo. Pregunta primero lo que se ve y luego lo que se mide con el polímetro, y las lecturas esperadas salen del simulador del circuito.",
+          "Un buscador de piezas por nombre en español o inglés, referencia OEM o código del despiece, y un libro de taller con la pauta de mantenimiento del manual.",
+        ],
+        imageAlt:
+          "Portada de lexus-anatomy: el sistema eléctrico del IS200 en dibujo isométrico con el motor en marcha, sus mazos encendidos con tensión, corriente y retorno a masa, y la ficha del mazo principal del vano con su referencia del EPC",
       },
     },
   },

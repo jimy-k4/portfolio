@@ -41,7 +41,7 @@ Everything visible lives in `content/`, separate from the components:
 
 | File                    | What it holds                                                    |
 | ----------------------- | ---------------------------------------------------------------- |
-| `content/barca.ts`      | More than a Hack 2027, the hackathon with FC Barcelona           |
+| `content/barca.ts`      | More than a Hack 2027, the FC Barcelona hackathon (Off the clock) |
 | `content/projects.ts`   | Projects: links, tech, year, image and the text in each language |
 | `content/experience.ts` | Jobs. `show: false` hides one without deleting it                |
 | `content/dictionary.ts` | Interface text (navigation, headings, buttons)                   |
@@ -53,9 +53,12 @@ screenshots in the hero; `current: true` lists them under _Now building_. A fini
 its card: drop `current` and say so in its `status`. Use `link: null` for a project with no public page to visit (the
 card is then not clickable) and `repo: null` when its code is private.
 
-The Barça section has its own panel above the projects, in the club's colours. As the competition
-goes on, move `phase` forward in `content/barca.ts` and update `status` in both languages: the
-timeline marks that phase as _Now_.
+Projects with `group: "anatomy"` (kawa-anatomy and lexus-anatomy, the viewers of my own vehicles) leave
+_Selected work_ and get their own section, _Anatomies_, with the large cards.
+
+_Off the clock_ holds what is neither my job nor my own products. For now it is the Barça panel, in the
+club's colours: `phase` in `content/barca.ts` is the last phase we played, and the ones after it show as
+not reached.
 
 ## Project structure
 
@@ -66,7 +69,7 @@ app/
   icon.svg, robots.ts, sitemap.ts
 assets/projects/     project screenshots
 components/          header, project card, copy button, icons, FC Barcelona crest
-  sections/          hero, barca, projects, trajectory, contact, footer
+  sections/          hero, projects, anatomy, trajectory, off-the-clock, contact, footer
   figures/           interactive figures: the radiation bench under the thesis entry
   iso/               the Anatomy kit (MIT) the figures are drawn with
 content/             all the text and data
