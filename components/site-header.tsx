@@ -18,9 +18,10 @@ export function SiteHeader({ locale, nav }: Props) {
   const headerRef = useRef<HTMLElement>(null)
 
   const links = [
-    { id: "barca", label: nav.barca },
     { id: "projects", label: nav.work },
+    { id: "anatomy", label: nav.anatomy },
     { id: "trajectory", label: nav.experience },
+    { id: "off-the-clock", label: nav.offTheClock },
     { id: "contact", label: nav.contact },
   ]
 
@@ -34,7 +35,7 @@ export function SiteHeader({ locale, nav }: Props) {
       },
       { rootMargin: "-45% 0px -50% 0px" },
     )
-    for (const id of ["top", "barca", "projects", "trajectory", "contact"]) {
+    for (const id of ["top", "projects", "anatomy", "trajectory", "off-the-clock", "contact"]) {
       const section = document.getElementById(id)
       if (section) observer.observe(section)
     }

@@ -4,22 +4,32 @@ import { phase, type Barca as BarcaContent } from "@/content/barca"
 import type { Dictionary } from "@/content/dictionary"
 import { BarcaCrest } from "@/components/barca-crest"
 import { ExternalLink } from "@/components/external-link"
+import { SectionHeading } from "@/components/section-heading"
 
 type Props = {
   dict: Dictionary
   barca: BarcaContent
 }
 
-/** More than a Hack 2027: a blaugrana panel with the club's crest, apart from the projects. */
-export function Barca({ dict, barca }: Props) {
-  return (
-    <section id="barca" aria-labelledby="barca-title" className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
-        <p className="reveal font-mono text-xs tracking-[0.2em] text-subtle uppercase">
-          <span className="text-accent-text">01</span> / {barca.label}
-        </p>
+/**
+ * What I do outside my job and my own products: competitions and the like.
+ * For now, More than a Hack 2027, in a blaugrana panel with the club's crest.
+ */
+export function OffTheClock({ dict, barca }: Props) {
+  const labels = dict.offTheClock
 
-        <div className="blaugrana reveal relative mt-6 overflow-hidden rounded-3xl text-white">
+  return (
+    <section id="off-the-clock" aria-labelledby="off-the-clock-title" className="border-t border-line">
+      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
+        <SectionHeading
+          id="off-the-clock-title"
+          index="04"
+          label={labels.label}
+          title={labels.title}
+          subtitle={labels.subtitle}
+        />
+
+        <div className="blaugrana reveal relative mt-14 overflow-hidden rounded-3xl text-white">
           <div aria-hidden="true" className="blaugrana-stripes pointer-events-none absolute inset-0" />
 
           <div className="relative grid gap-12 p-6 sm:p-10 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-16 lg:p-14">
@@ -32,16 +42,13 @@ export function Barca({ dict, barca }: Props) {
                 </span>
               </div>
 
-              <h2
-                id="barca-title"
-                className="mt-6 text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] font-semibold tracking-[-0.04em] text-balance"
-              >
+              <h3 className="mt-6 text-[clamp(2.25rem,5.5vw,3.75rem)] leading-[0.95] font-semibold tracking-[-0.04em] text-balance">
                 {barca.title.before}
                 <em className="pr-[0.05em] font-serif text-[1.1em] font-normal tracking-[-0.01em] text-barca-gold italic">
                   {barca.title.em}
                 </em>
                 {barca.title.after}
-              </h2>
+              </h3>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-white/80">{barca.description}</p>
 
@@ -86,9 +93,14 @@ export function Barca({ dict, barca }: Props) {
                       {barca.now}
                     </span>
                   )}
+                  {index > phase && (
+                    <span className="inline-flex items-center rounded-full border border-white/30 px-2 py-0.5 text-white/75">
+                      {barca.out}
+                    </span>
+                  )}
                 </p>
-                <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="text-[15px] leading-relaxed text-pretty text-white/80">{item.detail}</p>
+                <h4 className={`text-xl font-semibold tracking-tight ${index > phase ? "text-white/75" : ""}`}>{item.title}</h4>
+                <p className="text-[15px] leading-relaxed text-pretty text-white/75">{item.detail}</p>
                 <p className="mt-auto pt-2 font-mono text-xs tracking-[0.15em] text-white/75 uppercase">{item.who}</p>
               </li>
             ))}

@@ -7,15 +7,16 @@ const en = {
   meta: {
     title: "Juan Llinares · Senior Full Stack Developer",
     description:
-      "Senior full stack developer and computer engineer in Alicante, Spain. I build Gym.y, made Bruto and compete in More than a Hack 2027, FC Barcelona's football data hackathon. Software that is easy to use and accessible to everyone. Open to freelance work.",
+      "Senior full stack developer and computer engineer in Alicante, Spain. I build Gym.y, made Bruto and draw my own vehicles part by part in kawa-anatomy and lexus-anatomy. Software that is easy to use and accessible to everyone. Open to freelance work.",
   },
   nav: {
     label: "Sections",
     skip: "Skip to content",
     backToTop: "back to top",
-    barca: "Barça",
     work: "Work",
+    anatomy: "Anatomies",
     experience: "Experience",
+    offTheClock: "Off the clock",
     contact: "Contact",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -43,6 +44,17 @@ const en = {
       description: "Experiments, university assignments and small tools.",
     },
     newTab: "(opens in a new tab)",
+  },
+  anatomy: {
+    label: "Anatomies",
+    title: { before: "Machines, ", em: "part by part", after: "" } as AccentTitle,
+    subtitle:
+      "Interactive viewers of my own vehicles, drawn from the factory manuals and the parts catalogue: every part with its real number, every system working live.",
+  },
+  offTheClock: {
+    label: "Off the clock",
+    title: { before: "Off the ", em: "clock", after: "" } as AccentTitle,
+    subtitle: "Away from my job and my own products: competitions, teams and whatever else I sign up for.",
   },
   experience: {
     label: "Experience",
@@ -74,15 +86,16 @@ const es: Dictionary = {
   meta: {
     title: "Juan Llinares · Desarrollador Senior Full Stack",
     description:
-      "Desarrollador senior full stack e ingeniero informático en Alicante. Construyo Gym.y, hice Bruto y compito en More than a Hack 2027, el hackathon de datos de fútbol del FC Barcelona. Software fácil de usar y accesible para todos. Acepto encargos.",
+      "Desarrollador senior full stack e ingeniero informático en Alicante. Construyo Gym.y, hice Bruto y dibujo mis propios vehículos pieza a pieza en kawa-anatomy y lexus-anatomy. Software fácil de usar y accesible para todos. Acepto encargos.",
   },
   nav: {
     label: "Secciones",
     skip: "Saltar al contenido",
     backToTop: "volver arriba",
-    barca: "Barça",
     work: "Proyectos",
+    anatomy: "Anatomías",
     experience: "Trayectoria",
+    offTheClock: "Fuera de horario",
     contact: "Contacto",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
@@ -110,6 +123,17 @@ const es: Dictionary = {
       description: "Experimentos, prácticas de la universidad y herramientas pequeñas.",
     },
     newTab: "(se abre en una pestaña nueva)",
+  },
+  anatomy: {
+    label: "Anatomías",
+    title: { before: "Máquinas, ", em: "pieza a pieza", after: "" },
+    subtitle:
+      "Visores interactivos de mis propios vehículos, dibujados con los manuales de fábrica y el catálogo de recambios: cada pieza con su número real, cada sistema funcionando en vivo.",
+  },
+  offTheClock: {
+    label: "Fuera de horario",
+    title: { before: "Fuera de ", em: "horario", after: "" },
+    subtitle: "Lejos de mi trabajo y de mis productos: competiciones, equipos y lo que se me ocurra apuntarme.",
   },
   experience: {
     label: "Trayectoria",

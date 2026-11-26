@@ -7,10 +7,11 @@ import { getProfile } from "@/content/profile"
 import { getProjects } from "@/content/projects"
 import { contact, site } from "@/content/site"
 import { SiteHeader } from "@/components/site-header"
-import { Barca } from "@/components/sections/barca"
+import { Anatomy } from "@/components/sections/anatomy"
 import { Contact } from "@/components/sections/contact"
 import { Footer } from "@/components/sections/footer"
 import { Hero } from "@/components/sections/hero"
+import { OffTheClock } from "@/components/sections/off-the-clock"
 import { Projects } from "@/components/sections/projects"
 import { Trajectory } from "@/components/sections/trajectory"
 import { isLocale } from "@/lib/i18n"
@@ -47,10 +48,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </a>
       <SiteHeader locale={lang} nav={dict.nav} />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Hero dict={dict} projects={projects} barca={barca} profile={profile} />
-        <Barca dict={dict} barca={barca} />
+        <Hero dict={dict} projects={projects} profile={profile} />
         <Projects dict={dict} projects={projects} />
+        <Anatomy dict={dict} projects={projects} />
         <Trajectory locale={lang} dict={dict} experience={getExperience(lang)} profile={profile} />
+        <OffTheClock dict={dict} barca={barca} />
         <Contact dict={dict} />
       </main>
       <Footer dict={dict} />
